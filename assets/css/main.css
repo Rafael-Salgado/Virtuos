@@ -1214,6 +1214,7 @@ div.owl-controls div.owl-nav div:hover {
 }
 
 .pagination-wrap ul li a {
+  font-family: roboto;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -2463,6 +2464,7 @@ ul.social-link-team li a {
 }
 
 .product-filters ul li {
+  font-family:Roboto;
   display: inline-block;
   font-weight: 700;
   font-size: 18px;
@@ -2475,6 +2477,7 @@ ul.social-link-team li a {
 }
 
 .product-filters ul li.active {
+  font-family:Roboto;
   border: 2px solid #ffb938;
   background-color: #ffb938;
   color: #fff;
@@ -2516,7 +2519,7 @@ p.product-price span {
 }
 
 a.cart-btn {
-  font-family: 'Poppins', sans-serif;
+  font-family: Roboto Condensed;
   display: inline-block;
   background-color: #ffb938;
   color: #fff;
