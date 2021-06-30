@@ -476,6 +476,10 @@ a.boxed-btn, a.bordered-btn, a.cart-btn {
   background-image: url(https://st4.depositphotos.com/2927537/i/600/depositphotos_313987792-stock-photo-close-up-of-musician-group.jpg);
 }
 
+.breadcrumb-bg-sp {
+  background-image: url(../img/IP2.jpg);
+}
+
 
 .breadcrumb-text p {
   color: #F28123;
