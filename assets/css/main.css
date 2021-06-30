@@ -491,6 +491,16 @@ a.boxed-btn, a.bordered-btn, a.cart-btn {
 }
 
 
+.breadcrumb-bg-cart {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLx3CNvPovieJOYeZ1Xuq-VMON3_-2n9M8rQ&usqp=CAU);
+}
+
+.breadcrumb-contact {
+  background-image: url(../img/bateria.jpg);
+}
+
+
+
 .breadcrumb-text p {
   color: #ffb938;
   font-weight: 700;
@@ -1069,8 +1079,8 @@ a.video-play-btn {
 }
 
 a.video-play-btn:hover {
-  background-color: #333;
-  color: #ffb938;
+  background-color: #373737;
+  color: #FFB938;
 }
 
 .latest-news-bg {
@@ -2060,8 +2070,8 @@ p.testimonial-body {
 ----------------------------------------------------------------------------- */
 a.video-play-btn {
   position: absolute;
-  background-color: #ffb938;
-  color: #373737;
+  background-color: #FFB938;
+  color: white;
   width: 90px;
   height: 90px;
   text-align: center;
@@ -2262,12 +2272,57 @@ ul.social-link-team li a {
 # Contact Page Styles
 
 ----------------------------------------------------------------------------- */
+
+.boton{
+  display: inline-block;
+  padding: 13px 22px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff !important;
+   background-color: #FFB938 !important;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 10px #999;
+  }
+  
+  .boton:hover {
+  background-color: #f7a307 !important ;
+  color: #fff  !important;
+}
+  
+  .boton:active {
+  
+  color: #fff ;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+  .location{
+      background-color: #373737;
+  }
+
+ .bodyContact{
+      background: url("../img/mesa-bg.jpg");
+      background-repeat: no-repeat ;
+      background-size: cover;
+      background-attachment: fixed;
+    
+    }
+
+
+
 .form-title {
-  margin-bottom: 25px;
+  margin-bottom: 60px;
+
+  
 }
 
 .form-title h2 {
-  font-size: 25px;
+  font-size: 3rem !important;
+  color: #ffb938 !important;
 }
 
 .form-title p {
@@ -2276,17 +2331,20 @@ ul.social-link-team li a {
 }
 
 .contact-form form p input[type=text], .contact-form form p input[type=tel], .contact-form form p input[type=email] {
-  width: 49%;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 3px;
+  width: 48%;
+  padding: 10px;
+  border: 1px solid rgb(219, 214, 214);
+  box-shadow: 0 5px rgb(185, 181, 181);
+  border-radius: 5px;
+ 
 }
 
 .contact-form form p textarea {
-  border: 1px solid #ddd;
+  border: 1px solid rgb(219, 214, 214);
+  box-shadow: 0 5px rgb(185, 181, 181);
   padding: 15px;
   height: 200px;
-  border-radius: 3px;
+  border-radius: 5px;
   width: 100%;
   resize: none;
 }
@@ -2295,11 +2353,13 @@ ul.social-link-team li a {
   background-color: #FBFBFB;
   padding: 45px 30px;
   border-radius: 5px;
+  
 }
 
 .contact-form-box {
   padding-left: 40px;
   margin-bottom: 30px;
+  box-shadow: 0 5px rgb(185, 181, 181);
 }
 
 .contact-form-box h4 {
@@ -2307,6 +2367,7 @@ ul.social-link-team li a {
   font-weight: 600;
   position: relative;
   margin-bottom: 10px;
+  
 }
 
 .contact-form-box h4 i {
@@ -2314,15 +2375,19 @@ ul.social-link-team li a {
   left: -13%;
   color: #ffb938;
   top: 2px;
+  
 }
 
 .contact-form-box p {
   line-height: 1.8;
   opacity: 0.8;
+  
+  
 }
 
 .contact-form-wrap .contact-form-box:last-child {
   margin: 0;
+  
 }
 
 .find-location p {
