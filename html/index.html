@@ -37,6 +37,8 @@
 	<link rel="stylesheet" href="/assets/css/main.css">
 	<!-- responsive -->
 	<link rel="stylesheet" href="/assets/css/responsive.css">
+	<!-- video -->
+	<link rel="stylesheet" href="/assets/css/video.style.css">
 
 </head>
 <body>
@@ -101,26 +103,22 @@
 	</div>
 	<!-- end search area -->
 
-	<!-- hero area -->
-	<div class="hero-area hero-bg">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-9 offset-lg-2 text-center">
-					<div class="hero-text">
-						<div class="hero-text-tablecell">
-							<p class="subtitle">Fresh & Organic</p>
-							<h1>Delicious Seasonal Fruits</h1>
-							<div class="hero-btns">
-								<a href="/html/shop.html" class="boxed-btn">Fruit Collection</a>
-								<a href="/html/contact.html" class="bordered-btn">Contact Us</a>
-							</div>
-						</div>
-					</div>
-				</div>
+	<!-- video area -->
+	
+		<div class="container-fluid-video">
+			<div class="video_container">
+			  <video autoplay muted loop class="fillWidth visible-lg">
+				<source src="/assets/video/Trompeta_i_Saxo_Trim.mp4" type="video/mp4" />
+				Your browser does not support the video tag.
+			  </video>
+			  <a class="screen-video"></a>
+			  <div class="centered">
+				<span class="video_text"></span>
+			  </div>
 			</div>
-		</div>
-	</div>
-	<!-- end hero area -->
+		  </div>
+	
+	<!-- end video area -->
 
 	<!-- features list section -->
 	<div class="list-section pt-80 pb-80">
@@ -133,8 +131,8 @@
 							<i class="fas fa-shipping-fast"></i>
 						</div>
 						<div class="content">
-							<h3>Free Shipping</h3>
-							<p>When order over $75</p>
+							<h3>Envío Gratis</h3>
+							<p>En compras superiores a $500</p>
 						</div>
 					</div>
 				</div>
@@ -144,8 +142,8 @@
 							<i class="fas fa-phone-volume"></i>
 						</div>
 						<div class="content">
-							<h3>24/7 Support</h3>
-							<p>Get support all day</p>
+							<h3>Soporte 24/7</h3>
+							<p>Obtén soporte todo el día</p>
 						</div>
 					</div>
 				</div>
@@ -155,8 +153,8 @@
 							<i class="fas fa-sync"></i>
 						</div>
 						<div class="content">
-							<h3>Refund</h3>
-							<p>Get refund within 3 days!</p>
+							<h3>Devolución</h3>
+							<p>¡Cambios y devoluciones dentro de 3 días!</p>
 						</div>
 					</div>
 				</div>
@@ -172,7 +170,7 @@
 			<div class="row">
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="section-title">	
-						<h3><span class="orange-text">Our</span> Products</h3>
+						<h3><span class="orange-text">Nuestros</span> Productos</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, fuga quas itaque eveniet beatae optio.</p>
 					</div>
 				</div>
@@ -184,9 +182,9 @@
 						<div class="product-image">
 							<a href="single-product.html"><img src="/assets/img/products/clarinete.png" alt=""></a>
 						</div>
-						<h3>Strawberry</h3>
-						<p class="product-price"><span>Per Kg</span> 85$ </p>
-						<a href="/html/cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+						<h3>Clarinete</h3>
+						<p class="product-price"><span>Yamaha</span> $10,750.00 </p>
+						<a href="/html/cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Añadir</a>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 text-center">
@@ -194,9 +192,9 @@
 						<div class="product-image">
 							<a href="/html/single-product.html"><img src="/assets/img/products/baritono.png" alt=""></a>
 						</div>
-						<h3>Berry</h3>
-						<p class="product-price"><span>Per Kg</span> 70$ </p>
-						<a href="/html/cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+						<h3>Barítono</h3>
+						<p class="product-price"><span>Silvertone</span> $14,574.00 </p>
+						<a href="/html/cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Añadir</a>
 					</div>
 				</div>
 				<div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0 text-center">
@@ -204,9 +202,9 @@
 						<div class="product-image">
 							<a href="/html/single-product.html"><img src="/assets/img/products/corno.png" alt=""></a>
 						</div>
-						<h3>Lemon</h3>
-						<p class="product-price"><span>Per Kg</span> 35$ </p>
-						<a href="/html/cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+						<h3>Corno</h3>
+						<p class="product-price"><span>Silvertone</span> $9,750.00 </p>
+						<a href="/html/cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Añadir</a>
 					</div>
 				</div>
 			</div>
@@ -224,7 +222,7 @@
                     	<div class="price-box">
                         	<div class="inner-price">
                                 <span class="price">
-                                    <strong>30%</strong> <br> off per kg
+                                 oferta<br> <strong>15%</strong> 
                                 </span>
                             </div>
                         </div>
@@ -233,12 +231,12 @@
                 </div>
                 <!--Content Column-->
                 <div class="content-column col-lg-6">
-					<h3><span class="orange-text">Deal</span> of the month</h3>
-                    <h4>Hikan Strwaberry</h4>
-                    <div class="text">Quisquam minus maiores repudiandae nobis, minima saepe id, fugit ullam similique! Beatae, minima quisquam molestias facere ea. Perspiciatis unde omnis iste natus error sit voluptatem accusant</div>
+					<h3><span class="orange-text">Promoción</span> del mes</h3>
+                    <h4>Clarinete Buffet Bc1180-2-0</h4>
+                    <div class="text">Completamente revisado, para ofrecer a los fanáticos y estudiantes jóvenes un instrumento que les permita vivir sensaciones profundas tocando particularmente las notas de bajo, pilares de armonía. Será perfecto para todos los estilos de música.</div>
                     <!--Countdown Timer-->
-                    <div class="time-counter"><div class="time-countdown clearfix" data-countdown="2021/6/30"><div class="counter-column"><div class="inner"><span class="count">00</span>Days</div></div> <div class="counter-column"><div class="inner"><span class="count">00</span>Hours</div></div>  <div class="counter-column"><div class="inner"><span class="count">00</span>Mins</div></div>  <div class="counter-column"><div class="inner"><span class="count">00</span>Secs</div></div></div></div>
-                	<a href="/html/cart.html" class="cart-btn mt-3"><i class="fas fa-shopping-cart"></i> Add to Cart</a>
+                    <div class="time-counter"><div class="time-countdown clearfix" data-countdown="2021/7/5"><div class="counter-column"><div class="inner"><span class="count">00</span>Days</div></div> <div class="counter-column"><div class="inner"><span class="count">00</span>Hours</div></div>  <div class="counter-column"><div class="inner"><span class="count">00</span>Mins</div></div>  <div class="counter-column"><div class="inner"><span class="count">00</span>Secs</div></div></div></div>
+                	<a href="/html/cart.html" class="cart-btn mt-3"><i class="fas fa-shopping-cart"></i> Añadir</a>
                 </div>
             </div>
         </div>
@@ -256,9 +254,9 @@
 								<img src="/assets/img/avaters/avatar1.png" alt="">
 							</div>
 							<div class="client-meta">
-								<h3>Saira Hakim <span>Local shop owner</span></h3>
+								<h3>Sara Meléndez <span>Cliente</span></h3>
 								<p class="testimonial-body">
-									" Sed ut perspiciatis unde omnis iste natus error veritatis et  quasi architecto beatae vitae dict eaque ipsa quae ab illo inventore Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium "
+									" Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur neque sit corrupti odio aliquid quia debitis laboriosam quisquam voluptatum iure? Praesentium animi accusamus hic rerum tempore voluptatum, et nobis deleniti. "
 								</p>
 								<div class="last-icon">
 									<i class="fas fa-quote-right"></i>
@@ -270,9 +268,9 @@
 								<img src="/assets/img/avaters/avatar2.png" alt="">
 							</div>
 							<div class="client-meta">
-								<h3>David Niph <span>Local shop owner</span></h3>
+								<h3>David López <span>Cliente</span></h3>
 								<p class="testimonial-body">
-									" Sed ut perspiciatis unde omnis iste natus error veritatis et  quasi architecto beatae vitae dict eaque ipsa quae ab illo inventore Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium "
+									" Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam ipsa sit obcaecati rerum cumque architecto accusamus laborum corporis, laboriosam voluptas. Libero culpa fugit commodi sunt neque doloremque voluptatibus. Nemo, numquam. "
 								</p>
 								<div class="last-icon">
 									<i class="fas fa-quote-right"></i>
@@ -284,9 +282,9 @@
 								<img src="/assets/img/avaters/avatar3.png" alt="">
 							</div>
 							<div class="client-meta">
-								<h3>Jacob Sikim <span>Local shop owner</span></h3>
+								<h3>Jacobo Márquez <span>Local shop owner</span></h3>
 								<p class="testimonial-body">
-									" Sed ut perspiciatis unde omnis iste natus error veritatis et  quasi architecto beatae vitae dict eaque ipsa quae ab illo inventore Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium "
+									" Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis placeat aperiam autem perferendis optio cumque, omnis a modi incidunt earum ut iusto, est dolor repellat. Fugiat distinctio pariatur assumenda optio. "
 								</p>
 								<div class="last-icon">
 									<i class="fas fa-quote-right"></i>
@@ -311,11 +309,11 @@
 				</div>
 				<div class="col-lg-6 col-md-12">
 					<div class="abt-text">
-						<p class="top-sub">Since Year 1999</p>
-						<h2>We are <span class="orange-text">Fruitkha</span></h2>
+						<p class="top-sub">Nueva batería acústica</p>
+						<h2>Rydeen <span class="orange-text">Yamaha</span></h2>
 						<p>Etiam vulputate ut augue vel sodales. In sollicitudin neque et massa porttitor vestibulum ac vel nisi. Vestibulum placerat eget dolor sit amet posuere. In ut dolor aliquet, aliquet sapien sed, interdum velit. Nam eu molestie lorem.</p>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente facilis illo repellat veritatis minus, et labore minima mollitia qui ducimus.</p>
-						<a href="/html/about.html" class="boxed-btn mt-4">know more</a>
+						<a href="/html/single-product.html" class="boxed-btn mt-4">Saber más</a>
 					</div>
 				</div>
 			</div>
