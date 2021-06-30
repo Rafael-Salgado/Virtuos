@@ -475,6 +475,11 @@ a.boxed-btn, a.bordered-btn, a.cart-btn {
   background-image: url(../img/breadcrumb-bg.jpg);
 }
 
+.breadcrumb-bg-sp {
+  background-image: url(../img/IP2.jpg);
+}
+
+
 .breadcrumb-text p {
   color: #F28123;
   font-weight: 700;
