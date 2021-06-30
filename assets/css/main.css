@@ -2485,11 +2485,9 @@ ul.social-link-team li a {
 
 }
 
-.single-product-item:hover{
+.single-product-item1:hover{
   margin-bottom: 30px;
-  background-image: url(/assets/img/IP6.jpg);
-  background-position: center;
-  background-size:cover;
+  background-color: white;
 }
 
 .product-image {
