@@ -1059,8 +1059,8 @@ a.video-play-btn {
 }
 
 a.video-play-btn:hover {
-  background-color: #333;
-  color: #F28123;
+  background-color: #373737;
+  color: #FFB938;
 }
 
 .latest-news-bg {
@@ -2049,8 +2049,8 @@ p.testimonial-body {
 ----------------------------------------------------------------------------- */
 a.video-play-btn {
   position: absolute;
-  background-color: #F28123;
-  color: #051922;
+  background-color: #FFB938;
+  color: white;
   width: 90px;
   height: 90px;
   text-align: center;
