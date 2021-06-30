@@ -887,18 +887,21 @@ a.mobile-show {
 .footer-area {
   background-color: #373737;
   color: #fff;
-  padding: 150px 0;
+  padding: 1rem;
 }
 
 h2.widget-title {
-  font-size: 24px;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 700;
   position: relative;
   padding-bottom: 20px;
   color: #fff;
 }
 
-h2.widget-title:after {
+h2.widget-title:hover{
+  color: #ffb938;
+}
+/*h2.widget-title:after {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -906,7 +909,7 @@ h2.widget-title:after {
   height: 2px;
   background-color: #ffb938;
   content: "";
-}
+}*/
 
 .footer-box p {
   color: #fff;
@@ -2596,7 +2599,7 @@ ul.product-share li {
 
 ul.product-share li a {
   display: block;
-  color: #373737;
+  color: white;
   margin-right: 10px;
 }
 
