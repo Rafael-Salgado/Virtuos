@@ -117,6 +117,8 @@
 	<!-- end breadcrumb section -->
 
 	<!-- contact form -->
+
+
 	<div class="contact-from-section mt-150 mb-150">
 		<div class="container">
 			<div class="row">
@@ -125,9 +127,12 @@
 						<h2>Dudas y sugerencias</h2>
 					
 					</div>
+
+					<!--  mailto:hellovirtuos@gmail.com -->
+				
 				 	<div id="form_status "></div>
 					<div class="contact-form">
-						<form type="POST" id="fruitkha-contact" onSubmit="return valid_datas( this );">
+						<form  actiont="/send-mail" method="POST" name="myForm"  id="fruitkha-contact" class="formulario" onSubmit="return valid_datas( this );">
 							<p>
 								<input class="mr-4" type="text" placeholder="Nombre" name="name" id="name">
 								<input type="email" placeholder="Correo" name="email" id="email">
