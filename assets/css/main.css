@@ -2198,19 +2198,27 @@ a.video-play-btn {
 }
 
 .team-bg-1 {
-  background-image: url(../img/team/team-1.jpg);
+  background-image: url(/assets/img/team/lily_perfil.png);
 }
 
 .team-bg-2 {
-  background-image: url(../img/team/team-2.jpg);
+  background-image: url(/assets/img/team/perfil_rafa.png);
 }
 
 .team-bg-3 {
-  background-image: url(../img/team/team-3.jpg);
+  background-image: url(/assets/img/team/alexis_perfil.png);
 }
 
 .team-bg-4 {
-  background-image: url(../img/team/team-4.jpg);
+  background-image: url(/assets/img/team/rodrigo_perfil.png);
+}
+
+.team-bg-5 {
+  background-image: url(/assets/img/team/marce_perfil.png);
+}
+
+.team-bg-6 {
+  background-image: url(/assets/img/team/karen_perfil.png);
 }
 
 .team-bg {
