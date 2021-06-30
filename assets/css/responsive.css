@@ -21,9 +21,29 @@
 	.contact-form form p input[type=email] {
 	    margin-left: 8px;
 	}
-	.contact-form-box h4 i {
-	    left: -20%;
+	/*.contact-form-box h4 i {
+	  	left: 0%;
+		width: 40%;
+		padding: 0px; 
+
+	}*/
+
+
+	.contact-form form p input[type=text]	 {
+	    width: 100%;
 	}
+	.contact-form form p input[type=tel]
+	 {
+		margin-bottom: 3%;
+	    width: 100%;
+	}
+
+	.contact-form form p input[type=email] {
+	    margin-left: 0%;
+		width: 100%;
+		margin-top: 3%;
+	}
+	
 	.comment-template form p input[type=email] {
 	    margin-left: 8px;
 	}
