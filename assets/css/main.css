@@ -473,12 +473,12 @@ a.boxed-btn, a.bordered-btn, a.cart-btn {
 
 
 .breadcrumb-bg-km {
-  background-image: url(https://st4.depositphotos.com/2927537/i/600/depositphotos_313987792-stock-photo-close-up-of-musician-group.jpg);
+  background-image: url(/assets/img/products/depositphotos_313987792-stock-photo-close-up-of-musician-group.jpg);
 }
 
 
 .breadcrumb-text p {
-  color: #F28123;
+  color: #ffb938;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 7px;
@@ -625,7 +625,7 @@ ul.sub-menu li:last-child {
 }
 
 .mean-bar a.meanmenu-reveal {
-  background-color: #F28123;
+  background-color: #Fff9;
 }
 
 .main-menu-wrap {
@@ -1196,7 +1196,7 @@ div.owl-controls div.owl-nav div:hover {
 }
 
 .pagination-wrap ul li:hover a {
-  background-color: #F28123;
+  background-color: #ffb938;
 }
 
 .icons a i {
@@ -1206,7 +1206,7 @@ div.owl-controls div.owl-nav div:hover {
 }
 
 .icons a:hover i {
-  color: #F28123;
+  color: #ffb938;
 }
 
 .tof-text a.tof-btn {
@@ -1698,7 +1698,7 @@ p.excerpt {
 }
 
 .pagination-wrap ul li a.active {
-  background-color: #F28123;
+  background-color: #ffb938;
 }
 
 .single-artcile-bg {
@@ -2395,8 +2395,8 @@ ul.social-link-team li a {
 }
 
 .product-filters ul li.active {
-  border: 2px solid #F28123;
-  background-color: #F28123;
+  border: 2px solid #ffb938;
+  background-color: #ffb938;
   color: #fff;
 }
 
@@ -2438,7 +2438,7 @@ p.product-price span {
 a.cart-btn {
   font-family: 'Poppins', sans-serif;
   display: inline-block;
-  background-color: #F28123;
+  background-color: #ffb938;
   color: #fff;
   padding: 10px 20px;
 }
