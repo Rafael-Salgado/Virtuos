@@ -492,7 +492,11 @@ a.boxed-btn, a.bordered-btn, a.cart-btn {
 
 
 .breadcrumb-bg-cart {
-  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLx3CNvPovieJOYeZ1Xuq-VMON3_-2n9M8rQ&usqp=CAU);
+  background-image: url(https://cdn.romania-insider.com/cdn/ff/IYqMtibwrtleMuFgCkWSfxc0LZwgynQVqHZcBtpvsFw/1613386527/public/styles/article_large_image/public/2020-11/musicians_classical_music_trumpet_-_photo_jaroslav_moravcik_dreamstime.com_.jpg);
+}
+
+.breadcrumb-bg-log {
+  background-image: url(https://images.universe.com/954f1e9e-a841-40bf-9e99-9edef95dc25b/-/scale_crop/940x492/-/progressive/yes/);
 }
 
 .breadcrumb-contact {
@@ -1931,8 +1935,8 @@ span.comment-date {
   position: absolute;
   left: 15%;
   top: -30px;
-  width: 110px;
-  height: 110px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   border: 1px solid #fff;
   background-color: #eec23e93;
@@ -1940,8 +1944,8 @@ span.comment-date {
 
 .cart-banner .image-column .price-box .inner-price {
   position: relative;
-  width: 94px;
-  height: 94px;
+  width: 150px;
+  height: 150px;
   margin: 0 auto;
   margin-top: 8px;
   text-align: center;
@@ -2017,6 +2021,48 @@ span.comment-date {
   font-weight: 700;
   letter-spacing: 1px;
 }
+
+.row1{
+background-color: whitesmoke;
+
+}
+
+/*FORMULARIO*/
+
+form{
+  padding: 50px;
+  max-width: 500px;
+  background-color: #373737;
+  margin: 0 auto;
+}
+
+form input, form textarea, form select{
+  margin-bottom: 15px;
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; 
+  border: none; 
+  color: #525c66; 
+  font-size: 1em;
+  resize: horizontal; 
+}
+
+form button {
+	display: block;
+	background-color: #eec23e;
+	padding: 10px 45px 10px 45px;
+	border: 0;
+	font-size: 1em; 
+	color: 	white;
+  font-family: "Roboto", sans-serif;
+}
+form button hover{
+	background-color: #525c66;
+}
+textarea { resize: none; }
+
 
 /* -----------------------------------------------------------------------------
 
