@@ -75,7 +75,8 @@
         </div>
       </div>
     </div>
-    <form id="productForm" onsubmit="submitProduct();return false">
+
+    <form id="productForm" onsubmit="submitProduct()">
       <select
         name="productCategory"
         class="custom-select"
@@ -162,7 +163,7 @@
               <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="about.html">Acerca</a></li>
-                <li><a href="services.html">Tienda</a></li>
+                <li><a href="shop.html">Tienda</a></li>
                 <li><a href="contact.html">Contacto</a></li>
               </ul>
             </div>
@@ -207,20 +208,33 @@
     <script>
       function submitProduct() {
         let form = document.getElementById("productForm");
-        let name = form.elements["productName"].value;
-        let img = form.elements["productImg"].value;
-        let supplier = form.elements["productSupplier"].value;
-        let category = form.elements["productCategory"].value;
-        let price = form.elements["productPrice"].value;
-        let description = form.elements["productDescription"].value;
-        form.elements["productName"].value=" ";
-        form.elements["productImg"].value=" ";
-        form.elements["productSupplier"].value=" ";
-        form.elements["productCategory"].value=" ";
-        form.elements["productPrice"].value=" ";
-        form.elements["productDescription"].value=" ";
+        let productName = form.elements["productName"].value;
+        let productImg = form.elements["productImg"].value;
+        let productSupplier = form.elements["productSupplier"].value;
+        let productCategory = form.elements["productCategory"].value;
+        let productPrice = form.elements["productPrice"].value;
+        let productDescription = form.elements["productDescription"].value;
+       
+        const product={
+            name: productName, 
+            img: productImg, 
+            category: productCategory,
+            supplier: productSupplier,
+            price: productPrice,
+            description: productDescription
+        };
+        if(localStorage.productList == null){
+            let list = [];
+            list.push(product);
+            alert(JSON.stringify(list))
+            localStorage.setItem("productList", JSON.stringify(list));
 
-        alert(name+'\n'+img+'\n'+supplier+'\n'+category+'\n'+price+'\n'+description);
+        }else{
+            let list = JSON.parse(localStorage.productList);
+            list.push(product);
+            localStorage.productList = JSON.stringify(list);
+        }
+            
       }
     </script>
   </body>
