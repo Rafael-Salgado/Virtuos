@@ -1321,7 +1321,17 @@ ul.product-share li a {
   transition: 0.3s;
 }
 
+ul.product-share2 li a {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
 ul.product-share li:hover a {
+  color: #ffb938;
+}
+
+ul.product-share2 li:hover a {
   color: #ffb938;
 }
 
@@ -2593,13 +2603,29 @@ ul.product-share {
   list-style: none;
 }
 
+ul.product-share2 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 ul.product-share li {
+  display: inline-block;
+}
+
+ul.product-share2 li {
   display: inline-block;
 }
 
 ul.product-share li a {
   display: block;
   color: white;
+  margin-right: 10px;
+}
+
+ul.product-share2 li a {
+  display: block;
+  color: #373737;
   margin-right: 10px;
 }
 
