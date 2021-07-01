@@ -100,7 +100,8 @@
         });
         
         // isotop inner
-        //$(".product-lists").isotope({filter: '*'});
+        $(".product-lists").isotope();
+
         // magnific popup
         $('.popup-youtube').magnificPopup({
             disableOn: 700,
