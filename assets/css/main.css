@@ -2292,7 +2292,7 @@ ul.social-link-team li a {
 
 ----------------------------------------------------------------------------- */
 
-.boton{
+.botonContacto{
   display: inline-block;
   padding: 13px 22px;
   font-size: 15px;
@@ -2307,12 +2307,12 @@ ul.social-link-team li a {
   box-shadow: 0 10px #999;
   }
   
-  .boton:hover {
+  .botonContacto:hover {
   background-color: #f7a307 !important ;
   color: #fff  !important;
 }
   
-  .boton:active {
+  .botonContacto:active {
   
   color: #fff ;
     box-shadow: 0 5px #666;
