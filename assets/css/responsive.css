@@ -21,23 +21,31 @@
 	.contact-form form p input[type=email] {
 	    margin-left: 8px;
 	}
-	/*.contact-form-box h4 i {
+
+/*	.contact-form-box h4 i {
 	  	left: 0%;
 		width: 40%;
 		padding: 0px; 
 
 	}*/
 
+	
+	.contact-select	 {
+	    width: 100%;	
+	} 
 
-	.contact-form form p input[type=text]	 {
-	    width: 100%;
-	}
+
 	.contact-form form p input[type=tel]
 	 {
 		margin-bottom: 3%;
 	    width: 100%;
 	}
 
+	.contact-form form p input[type=text] {
+	    margin-left: 0%;
+		width: 100%;
+		margin-top: 3%;
+	}
 	.contact-form form p input[type=email] {
 	    margin-left: 0%;
 		width: 100%;
@@ -47,6 +55,7 @@
 	.comment-template form p input[type=email] {
 	    margin-left: 8px;
 	}
+	
 	ul.main-menu li a {
 	    padding: 15px 13px;
 	}
@@ -89,7 +98,9 @@
 	.contact-form form p input[type=email] {
 	    width: 100%;
 	}
-
+	.contact-select	 {
+	    width: 100%;	
+	} 
 	.contact-form form p input[type=email] {
 	    margin-left: 0;
 	    margin-top: 15px;
@@ -332,6 +343,10 @@
 	.contact-form form p input[type=email] {
 	    width: 100%;
 	}
+
+	.contact-select	 {
+	    width: 100%;	
+	} 
 	.contact-form form p input[type=tel] {
 		margin-bottom: 15px;
 	}
