@@ -904,9 +904,6 @@ h2.widget-title {
   color: #fff;
 }
 
-h2.widget-title:hover{
-  color: #ffb938;
-}
 
 h2.widget-title:after {
   position: absolute;
