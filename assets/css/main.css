@@ -907,7 +907,8 @@ h2.widget-title {
 h2.widget-title:hover{
   color: #ffb938;
 }
-/*h2.widget-title:after {
+
+h2.widget-title:after {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -915,7 +916,7 @@ h2.widget-title:hover{
   height: 2px;
   background-color: #ffb938;
   content: "";
-}*/
+}
 
 .footer-box p {
   color: #fff;
