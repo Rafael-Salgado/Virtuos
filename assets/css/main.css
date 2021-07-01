@@ -1949,8 +1949,8 @@ span.comment-date {
   position: absolute;
   left: 15%;
   top: -30px;
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   border: 1px solid #fff;
   background-color: #eec23e93;
@@ -1958,8 +1958,8 @@ span.comment-date {
 
 .cart-banner .image-column .price-box .inner-price {
   position: relative;
-  width: 150px;
-  height: 150px;
+  width: 80px;
+  height: 80px;
   margin: 0 auto;
   margin-top: 8px;
   text-align: center;
@@ -2047,14 +2047,14 @@ background-color: white;
 
 /*FORMULARIO*/
 
-form{
+.form-lili{
   padding: 50px;
   max-width: 500px;
   background-color: #373737;
   margin: 0 auto;
 }
 
-form input, form textarea, form select{
+form .input-lili, form .textarea-lili, form .select-lili{
   margin-bottom: 15px;
   font-family: "Roboto", sans-serif;
   width: 100%;
@@ -2067,7 +2067,7 @@ form input, form textarea, form select{
   resize: horizontal; 
 }
 
-form button {
+form .button-lili {
 	display: block;
 	background-color: #eec23e;
 	padding: 10px 45px 10px 45px;
@@ -2076,7 +2076,7 @@ form button {
 	color: 	white;
   font-family: "Roboto", sans-serif;
 }
-form button hover{
+form .button-lili hover{
 	background-color: #525c66;
 }
 textarea { resize: none; }
@@ -2242,7 +2242,7 @@ a.video-play-btn {
 ----------------------------------------------------------------------------- */
 .feature-bg {
   position: relative;
-  margin: 150px 0;
+  margin: 100px 0;
 }
 
 .feature-bg:after {
