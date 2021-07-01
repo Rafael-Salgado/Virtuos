@@ -19,9 +19,10 @@ function addItem(item) {
           </div>`;
   const itemsContainer = document.getElementById("list-items");
   itemsContainer.innerHTML += itemHTML;
+  
 }
 // Listas de objetos a importarse automáticamente guardando la estructura que está en la función. Pidieron 10 pero son 12 //
-/*addItem({
+addItem({
   name: "Piano",
   img: "https://d1aeri3ty3izns.cloudfront.net/media/67/671442/600/preview.jpg",
   description:
@@ -42,23 +43,25 @@ addItem({
     "Embocadura de caña sujeta a la boquilla mediante una abrazadera.",
 });
 
- addItem({'name':'Saxofón alto',
-    'img':'https://karmamusic.mx/5440-large_default/sax-alto-laqueado-cyrus-winds------c.jpg',
-    'description':'Hecho de latón y consta de una boquilla de plástico, madera o de metal con una única caña.'})
+addItem({name:'Saxofón alto',
+    img:'https://karmamusic.mx/5440-large_default/sax-alto-laqueado-cyrus-winds------c.jpg',
+    description:'Hecho de latón y consta de una boquilla de plástico, madera o de metal con una única caña.'})
+
+   
 
     addItem({'name':'Saxofón Sopranino',
-    'img':'https://ae01.alicdn.com/kf/HTB1EtOSaGSs3KVjSZPiq6AsiVXab.jpg_q50.jpg',
-    'description':'Contiene 25 llaves y una boquilla en la cual se coloca una caña sostenida por la abrazadera (normalmente) de metal.'})
+    img:'https://ae01.alicdn.com/kf/HTB1EtOSaGSs3KVjSZPiq6AsiVXab.jpg_q50.jpg',
+    description:'Contiene 25 llaves y una boquilla en la cual se coloca una caña sostenida por la abrazadera (normalmente) de metal.'})
 
-    addItem({'name':'Guitarra Eléctrica',
-    'img':'https://resources.sears.com.mx/medios-plazavip/fotos/productos_sears1/original/3221317.jpg',
-    'description':'Hecha de materiales sintéticos que incluyen materiales plásticos (como el policarbonato) y aleaciones de aluminio.'})
+    addItem({name:'Guitarra Eléctrica',
+    img:'https://resources.sears.com.mx/medios-plazavip/fotos/productos_sears1/original/3221317.jpg',
+    description:'Hecha de materiales sintéticos que incluyen materiales plásticos (como el policarbonato) y aleaciones de aluminio.'})
 
-    addItem({'name':'Batería Junior',
-    'img':'https://www.electronicateran.com/391-large_default/bateria-acustica-yamaha-gigmaker-color-negra.jpg',
-    'description':'Contiene ccesorios relativamente comunes (tales como el cencerro, panderetas, bloques de madera, entre otros).'})
+    addItem({name:'Batería Junior',
+    img:'https://www.electronicateran.com/391-large_default/bateria-acustica-yamaha-gigmaker-color-negra.jpg',
+    description:'Contiene ccesorios relativamente comunes (tales como el cencerro, panderetas, bloques de madera, entre otros).'})
 
-    addItem({'name':'Guitarra Clásica',
+   /* addItem({'name':'Guitarra Clásica',
     'img':'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRuXUxuKy6eLtS_jUC_fuJ2dtePy-Ffoe7Tw&usqp=CAU',
     'description':'Hechas de madera de palisandro de la India (muy popular entre las guitarras que se utilizan entre los guitarristas flamencos) y ébano.'})
 
