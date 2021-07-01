@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+    <!-- fontawesome -->
+	<link rel="stylesheet" href="/assets/css/all.min.css">
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+	<!-- owl carousel -->
+	<link rel="stylesheet" href="/assets/css/owl.carousel.css">
+	<!-- magnific popup -->
+	<link rel="stylesheet" href="/assets/css/magnific-popup.css">
+	<!-- animate css -->
+	<link rel="stylesheet" href="/assets/css/animate.css">
+	<!-- mean menu css -->
+	<link rel="stylesheet" href="/assets/css/meanmenu.min.css">
+	<!-- main style -->
+	<link rel="stylesheet" href="/assets/css/main.css">
+	<!-- responsive -->
+	<link rel="stylesheet" href="/assets/css/responsive.css">
+    <style>
+      form {
+        width: 50vw;
+        background-color: #e7e7e700;
+        margin: 0 auto;
+      }
+
+      form > input,
+      form > textarea,
+      form > select {
+        margin-top: 5vmin;
+        font-family: "Roboto", sans-serif;
+        width: 100%;
+        padding: 1vmin;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+       /*  border-radius: 10px 10px 10px 10px;
+        border: 5px solid #898989; */
+        color: #525c66;
+        font-size: 1em;
+        resize: horizontal;
+      }
+
+      .btn-de-froma {
+        margin-top: 3vmin;
+        margin-bottom: 5vmin;
+        background-color: #eec23e;
+        padding: 10px 45px 10px 45px;
+        border: 0;
+        font-size: 1em;
+        color: white;
+        font-family: "Roboto", sans-serif;
+      }
+      form > button:hover {
+        background-color: #525c66;
+      }
+      article {
+        margin: auto 0;
+      }
+      textarea {
+        resize: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="breadcrumb-section breadcrumb-bg-sp">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="breadcrumb-text">
+						<h1>Administrador</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <form action="/send-mail" method="POST" name="myForm">
+      <select name="subject" class="custom-select" id="nombreSelect" required>
+        <option selected>Categoría</option>
+        <option value="Cuerdas">Cuerdas</option>
+        <option value="Viento">Viento</option>
+        <option value="Percusión">Percusión</option>
+      </select>
+      <br />
+      <input
+        type="text"
+        name="productName"
+        id="exampleFormControlInput1"
+        placeholder="Nombre del producto"
+        required
+      /><br />
+      <input
+        type="text"
+        class="form-control"
+        name="productSupplier"
+        id="exampleFormControlInput3"
+        placeholder="Proveedor"
+        required
+      /><br />
+      <input
+        type="text"
+        name="productImg"
+        class="form-control"
+        id="exampleFormControlInput4"
+        placeholder="URL Imagen"
+        required
+      />
+      <input
+        type="number"
+        name="productPrice"
+        class="form-control"
+        id="exampleFormControlInput4"
+        placeholder="Precio"
+        required
+      />
+      <button type="submit" value="Submit" class="btn btn-de-froma">
+        Guardar
+      </button>
+    </form>
+
+    <div class="footer-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box about-widget">
+						<h2 class="widget-title">About us</h2>
+						<p>Ut enim ad minim veniam perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box get-in-touch">
+						<h2 class="widget-title">Get in Touch</h2>
+						<ul>
+							<li>34/8, East Hukupara, Gifirtok, Sadan.</li>
+							<li>support@virtuos.com</li>
+							<li>+00 111 222 3333</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box pages">
+						<h2 class="widget-title">Pages</h2>
+						<ul>
+							<li><a href="index.html">Inicio</a></li>
+							<li><a href="about.html">Acerca</a></li>
+							<li><a href="services.html">Tienda</a></li>
+							<li><a href="contact.html">Contacto</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="footer-box subscribe">
+						<h2 class="widget-title">Subscribe</h2>
+						<p>Subscribe to our mailing list to get the latest updates.</p>
+						<form action="index.html">
+							<input type="email" placeholder="Email">
+							<button type="submit"><i class="fas fa-paper-plane"></i></button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <script>
+
+    </script>
+    	<!-- jquery -->
+	<script src="/assets/js/jquery-1.11.3.min.js"></script>
+	<!-- bootstrap -->
+	<script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+	<!-- count down -->
+	<script src="/assets/js/jquery.countdown.js"></script>
+	<!-- isotope -->
+	<script src="/assets/js/jquery.isotope-3.0.6.min.js"></script>
+	<!-- waypoints -->
+	<script src="/assets/js/waypoints.js"></script>
+	<!-- owl carousel -->
+	<script src="/assets/js/owl.carousel.min.js"></script>
+	<!-- magnific popup -->
+	<script src="/assets/js/jquery.magnific-popup.min.js"></script>
+	<!-- mean menu -->
+	<script src="/assets/js/jquery.meanmenu.min.js"></script>
+	<!-- sticker js -->
+	<script src="/assets/js/sticker.js"></script>
+	<!-- main js -->
+	<script src="/assets/js/main.js"></script>
+
+  </body>
+</html>
