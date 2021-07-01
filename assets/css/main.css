@@ -58,6 +58,7 @@ h6, .h6 {
   color: #373737;
 }
 
+
 h1:last-child, .h1:last-child,
 h2:last-child, .h2:last-child,
 h3:last-child, .h3:last-child,
@@ -887,7 +888,7 @@ a.mobile-show {
 .footer-area {
   background-color: #373737;
   color: #fff;
-  padding: 1rem;
+  padding: 0;
 }
 
 h2.widget-title {
@@ -898,10 +899,15 @@ h2.widget-title {
   color: #fff;
 }
 
-h2.widget-title:hover{
-  color: #ffb938;
+h2.widget-title2 {
+  font-size: 1rem;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 20px;
+  color: #fff;
 }
-/*h2.widget-title:after {
+
+h2.widget-title:after {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -909,11 +915,10 @@ h2.widget-title:hover{
   height: 2px;
   background-color: #ffb938;
   content: "";
-}*/
+}
 
 .footer-box p {
   color: #fff;
-  opacity: 0.7;
   line-height: 1.8;
 }
 
@@ -924,7 +929,6 @@ h2.widget-title:hover{
 }
 
 .footer-box ul li {
-  opacity: 0.7;
   margin-bottom: 10px;
   line-height: 1.8;
 }
@@ -933,7 +937,7 @@ h2.widget-title:hover{
   margin-bottom: 0;
 }
 
-.footer-box.subscribe form input[type=email] {
+/* .footer-box.subscribe form input[type=email] {
   border: none;
   background-color: #012738;
   width: 78%;
@@ -948,7 +952,7 @@ h2.widget-title:hover{
   border: none;
   background-color: #012738;
   color: #ffb938;
-  padding: 14px 0;
+  
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
   cursor: pointer;
@@ -956,7 +960,7 @@ h2.widget-title:hover{
 
 .footer-box.subscribe form button:focus {
   outline: none;
-}
+} */
 
 .copyright {
   background-color: #373737;
@@ -1007,7 +1011,7 @@ h2.widget-title:hover{
   padding-left: 20px;
 }
 
-.footer-box.pages ul li:before {
+/* .footer-box.pages ul li:before {
   position: absolute;
   left: 0;
   top: 0;
@@ -1015,7 +1019,7 @@ h2.widget-title:hover{
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   color: #ffb938;
-}
+} */
 
 /* -----------------------------------------------------------------------------
 
@@ -1322,6 +1326,10 @@ ul.product-share li a {
 }
 
 ul.product-share li:hover a {
+  color: #ffb938;
+}
+
+ul.product-share2 li:hover a {
   color: #ffb938;
 }
 
@@ -2597,7 +2605,17 @@ ul.product-share li {
   display: inline-block;
 }
 
+ul.product-share2 li {
+  display: inline-block;
+}
+
 ul.product-share li a {
+  display: block;
+  color:  #373737;
+  margin-right: 10px;
+}
+
+ul.product-share2 li a {
   display: block;
   color: white;
   margin-right: 10px;
@@ -2805,6 +2823,13 @@ table.order-details tbody td {
 }
 
 .single-product-item {
+  -webkit-box-shadow: 0 0 20px #e4e4e4;
+  box-shadow: 0 0 20px #e4e4e4;
+  padding-bottom: 50px;
+  border-radius: 5px;
+}
+
+.single-product-item2 {
   -webkit-box-shadow: 0 0 20px #e4e4e4;
   box-shadow: 0 0 20px #e4e4e4;
   padding-bottom: 50px;
