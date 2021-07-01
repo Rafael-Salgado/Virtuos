@@ -1,4 +1,5 @@
 
+
 /* -----------------------------------------------------------------------------
 
 # Base - Genral & Typography
@@ -329,7 +330,7 @@ p:last-child {
 }
 
 .mb-150 {
-  margin-bottom: 150px;
+  margin-bottom: 60px;
 }
 
 @media only screen and (max-width: 767.96px) {
@@ -492,7 +493,12 @@ a.boxed-btn, a.bordered-btn, a.cart-btn {
 
 
 .breadcrumb-bg-cart {
-  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLx3CNvPovieJOYeZ1Xuq-VMON3_-2n9M8rQ&usqp=CAU);
+
+  background-image: url(/assets/img/cart_bg_2.jpg);
+}
+
+.breadcrumb-bg-log {
+  background-image: url(https://images.universe.com/954f1e9e-a841-40bf-9e99-9edef95dc25b/-/scale_crop/940x492/-/progressive/yes/);
 }
 
 .breadcrumb-contact {
@@ -898,10 +904,8 @@ h2.widget-title {
   color: #fff;
 }
 
-h2.widget-title:hover{
-  color: #ffb938;
-}
-/*h2.widget-title:after {
+
+h2.widget-title:after {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -909,7 +913,7 @@ h2.widget-title:hover{
   height: 2px;
   background-color: #ffb938;
   content: "";
-}*/
+}
 
 .footer-box p {
   color: #fff;
@@ -1322,7 +1326,17 @@ ul.product-share li a {
   transition: 0.3s;
 }
 
+ul.product-share2 li a {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
 ul.product-share li:hover a {
+  color: #ffb938;
+}
+
+ul.product-share2 li:hover a {
   color: #ffb938;
 }
 
@@ -1935,8 +1949,8 @@ span.comment-date {
   position: absolute;
   left: 15%;
   top: -30px;
-  width: 110px;
-  height: 110px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   border: 1px solid #fff;
   background-color: #eec23e93;
@@ -1944,8 +1958,8 @@ span.comment-date {
 
 .cart-banner .image-column .price-box .inner-price {
   position: relative;
-  width: 94px;
-  height: 94px;
+  width: 80px;
+  height: 80px;
   margin: 0 auto;
   margin-top: 8px;
   text-align: center;
@@ -2021,6 +2035,52 @@ span.comment-date {
   font-weight: 700;
   letter-spacing: 1px;
 }
+
+.table-body-row{
+background-color: white;
+}
+
+.total-data{
+
+background-color: white;
+}
+
+/*FORMULARIO*/
+
+.form-lili{
+  padding: 50px;
+  max-width: 500px;
+  background-color: #373737;
+  margin: 0 auto;
+}
+
+form .input-lili, form .textarea-lili, form .select-lili{
+  margin-bottom: 15px;
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; 
+  border: none; 
+  color: #525c66; 
+  font-size: 1em;
+  resize: horizontal; 
+}
+
+form .button-lili {
+	display: block;
+	background-color: #eec23e;
+	padding: 10px 45px 10px 45px;
+	border: 0;
+	font-size: 1em; 
+	color: 	white;
+  font-family: "Roboto", sans-serif;
+}
+form .button-lili hover{
+	background-color: #525c66;
+}
+textarea { resize: none; }
+
 
 /* -----------------------------------------------------------------------------
 
@@ -2182,7 +2242,7 @@ a.video-play-btn {
 ----------------------------------------------------------------------------- */
 .feature-bg {
   position: relative;
-  margin: 150px 0;
+  margin: 100px 0;
 }
 
 .feature-bg:after {
@@ -2202,27 +2262,28 @@ a.video-play-btn {
 }
 
 .team-bg-1 {
-  background-image: url(/assets/img/team/lily_perfil.png);
+  background-image: url(/assets/img/team/Liliana.png);
 }
 
 .team-bg-2 {
-  background-image: url(/assets/img/team/perfil_rafa.png);
+  background-image: url(/assets/img/team/perfil_rafa_600x800.png);
 }
 
 .team-bg-3 {
-  background-image: url(/assets/img/team/alexis_perfil.png);
+  background-image: url(/assets/img/team/FotoAlexis.jpg);
 }
 
 .team-bg-4 {
-  background-image: url(/assets/img/team/rodrigo_perfil.png);
+  background-image: url(/assets/img/team/Rodri_perfil.JPG);
 }
 
 .team-bg-5 {
-  background-image: url(/assets/img/team/marce_perfil.png);
+  background-image: url(/assets/img/team/Marce.jpg);
 }
 
 .team-bg-6 {
-  background-image: url(/assets/img/team/karen_perfil.png);
+  background-image: url(/assets/img/team/karen.jpg);
+
 }
 
 .team-bg {
@@ -2285,7 +2346,7 @@ ul.social-link-team li a {
 
 ----------------------------------------------------------------------------- */
 
-.boton{
+.botonContacto{
   display: inline-block;
   padding: 13px 22px;
   font-size: 15px;
@@ -2300,12 +2361,12 @@ ul.social-link-team li a {
   box-shadow: 0 10px #999;
   }
   
-  .boton:hover {
+  .botonContacto:hover {
   background-color: #f7a307 !important ;
   color: #fff  !important;
 }
   
-  .boton:active {
+  .botonContacto:active {
   
   color: #fff ;
     box-shadow: 0 5px #666;
@@ -2627,14 +2688,30 @@ ul.product-share {
   list-style: none;
 }
 
+ul.product-share2 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 ul.product-share li {
+  display: inline-block;
+}
+
+ul.product-share2 li {
   display: inline-block;
 }
 
 ul.product-share li a {
   display: block;
   color: white;
+
   margin-right: 10px;
+}
+
+ul.product-share2 li a {
+  display: block;
+  color: #373737;
 }
 
 .single-product-content {
@@ -2844,6 +2921,15 @@ table.order-details tbody td {
   padding-bottom: 50px;
   border-radius: 5px;
 }
+
+.single-product-item2 {
+  -webkit-box-shadow: 0 0 20px #e4e4e4;
+  box-shadow: 0 0 20px #e4e4e4;
+  padding-bottom: 50px;
+  border-radius: 5px;
+}
+
+
 
 /* -----------------------------------------------------------------------------
 
