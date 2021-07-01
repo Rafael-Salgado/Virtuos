@@ -2027,9 +2027,13 @@ span.comment-date {
   letter-spacing: 1px;
 }
 
-.row1{
-background-color: whitesmoke;
+.table-body-row{
+background-color: white;
+}
 
+.total-data{
+
+background-color: white;
 }
 
 /*FORMULARIO*/

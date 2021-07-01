@@ -1,33 +1,14 @@
 
 function verificarPasswords (){
 // Obtenemos los valores de los campos de contraseñas 
-let p1 = document.getElementById('pass1');
-let p2 = document.getElementById('pass2');
+let p1 = document.getElementById('pass1').value;
+let p2 = document.getElementById('pass2').value;
 
 // Verificamos si las constraseñas no coinciden 
-if (p1.value != p2.value) {
-
-    // Si las constraseñas no coinciden mostramos un mensaje 
-    document.getElementById("error").classList.add("mostrar");
-
-    return false;
+if (p1 != p2) {
+  alert("Las passwords deben de coincidir");
+  return false;
 } else {
-
-    // Si las contraseñas coinciden ocultamos el mensaje de error
-    document.getElementById("error").classList.remove("mostrar");
-
-    // Mostramos un mensaje mencionando que las Contraseñas coinciden 
-    document.getElementById("ok").classList.remove("ocultar");
-
-    // Desabilitamos el botón de login 
-    document.getElementById("login").disabled = true;
-
-    // Refrescamos la página (Simulación de envío del formulario) 
-    setTimeout(function() {
-        location.reload();
-    }, 3000);
-
-    return true;
-}
-
-}
+  alert("Todo esta correcto");
+  return true; 
+}}
