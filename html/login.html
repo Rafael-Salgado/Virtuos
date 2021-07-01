@@ -39,7 +39,7 @@
 	<!-- responsive -->
 	<link rel="stylesheet" href="/assets/css/responsive.css">
   <!--js-->
-  <link rel="stylesheet" href="js/login.js"
+  <link rel="stylesheet" href="js/login.js">
 
 </head>
 <body>
@@ -118,22 +118,22 @@
 	<!-- end breadcrumb section -->
 
 	<!-- login -->
-<div class="container">
+<div class="container mb-150">
 	<br>
 	<div id="regisAlert" class="alert alert-danger" role="alert" hidden="true">
 	</div>
 	<br>
 
 <br>
-  <form id="miformulario" onsubmit="verificarDatos()" enctype="text/plain" name="myForm" class="formulario" >
-    <input type="text" id="nombre" class="form-control" placeholder="Nombres" aria-label="First name" required  title="Escribir en mayúsculas de A-Z.">
-    <input type="text" id="apellidos" class="form-control" placeholder="Apellidos" aria-label="First name" required>
-    <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com" required title="Tiene que ser un correo válido">
-    <input type="text" class="form-control" id="phone" placeholder="5555-5555" required>
-    <input type="password" class="form-control" id="pass1" placeholder="Contraseña" required>
-    <input type="password" class="form-control" id="pass2" placeholder="Validar contraseña"required>
+  <form id="miformulario" onsubmit="verificarDatos()" enctype="text/plain" name="myForm" class="formulario form-lili" >
+    <input type="text" id="nombre" class="form-control input-lili" placeholder="Nombres" aria-label="First name" required  title="Escribir en mayúsculas de A-Z.">
+    <input type="text" id="apellidos" class="form-control input-lili" placeholder="Apellidos" aria-label="First name" required>
+    <input type="email" class="form-control input-lili" id="email" placeholder="nombre@ejemplo.com" required title="Tiene que ser un correo válido">
+    <input type="text" class="form-control input-lili" id="phone" placeholder="5555-5555" required>
+    <input type="password" class="form-control input-lili" id="pass1" placeholder="Contraseña" required>
+    <input type="password" class="form-control input-lili" id="pass2" placeholder="Validar contraseña"required>
     
-    <button value="submit" class="btn btn-warning btn-lg">Registrarme</button>
+    <button value="submit" class="btn btn-warning btn-lg button-lili">Registrarme</button>
     </form>
 
 </div>
@@ -141,74 +141,29 @@
 
 	<!-- end cart -->
 
-	<!-- logo carousel -->
-	<div class="logo-carousel-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="logo-carousel-inner">
-						<div class="single-logo-item">
-							<img src="assets/img/company-logos/1.png" alt="">
-						</div>
-						<div class="single-logo-item">
-							<img src="assets/img/company-logos/2.png" alt="">
-						</div>
-						<div class="single-logo-item">
-							<img src="assets/img/company-logos/3.png" alt="">
-						</div>
-						<div class="single-logo-item">
-							<img src="assets/img/company-logos/4.png" alt="">
-						</div>
-						<div class="single-logo-item">
-							<img src="assets/img/company-logos/5.png" alt="">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- end logo carousel -->
-
 	<!-- footer -->
 	<div class="footer-area">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-3 col-md-6">
+				<div class="col-lg-9 col-md-6">
 					<div class="footer-box about-widget">
-						<h2 class="widget-title">About us</h2>
-						<p>Ut enim ad minim veniam perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
+						<h2 class="widget-title">Virtuos</h2>
+						<p>
+							Creemos en la música como estilo de vida, con más de 30 años
+							vendiendo los mejores productos en la rama musical.
+						</p>
 					</div>
 				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="footer-box get-in-touch">
-						<h2 class="widget-title">Get in Touch</h2>
-						<ul>
-							<li>34/8, East Hukupara, Gifirtok, Sadan.</li>
-							<li>support@fruitkha.com</li>
-							<li>+00 111 222 3333</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="footer-box pages">
-						<h2 class="widget-title">Pages</h2>
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="about.html">About</a></li>
-							<li><a href="services.html">Shop</a></li>
-							<li><a href="news.html">News</a></li>
-							<li><a href="contact.html">Contact</a></li>
-						</ul>
-					</div>
-				</div>
+				
 				<div class="col-lg-3 col-md-6">
 					<div class="footer-box subscribe">
-						<h2 class="widget-title">Subscribe</h2>
-						<p>Subscribe to our mailing list to get the latest updates.</p>
-						<form action="index.html">
-							<input type="email" placeholder="Email">
-							<button type="submit"><i class="fas fa-paper-plane"></i></button>
-						</form>
+						<h2 class="widget-title">Encuéntranos</h2>
+						<ul class="product-share">
+							<li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href=""><i class="fab fa-twitter"></i></a></li>
+							<li><a href=""><i class="fab fa-google-plus-g"></i></a></li>
+							<li><a href=""><i class="fab fa-linkedin"></i></a></li>
+						</ul>
 					</div>
 				</div>
 			</div>
