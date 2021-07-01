@@ -330,7 +330,7 @@ p:last-child {
 }
 
 .mb-150 {
-  margin-bottom: 150px;
+  margin-bottom: 60px;
 }
 
 @media only screen and (max-width: 767.96px) {
@@ -493,7 +493,8 @@ a.boxed-btn, a.bordered-btn, a.cart-btn {
 
 
 .breadcrumb-bg-cart {
-  background-image: url(https://cdn.romania-insider.com/cdn/ff/IYqMtibwrtleMuFgCkWSfxc0LZwgynQVqHZcBtpvsFw/1613386527/public/styles/article_large_image/public/2020-11/musicians_classical_music_trumpet_-_photo_jaroslav_moravcik_dreamstime.com_.jpg);
+
+  background-image: url(/assets/img/cart_bg_2.jpg);
 }
 
 .breadcrumb-bg-log {
@@ -1327,7 +1328,17 @@ ul.product-share li a {
   transition: 0.3s;
 }
 
+ul.product-share2 li a {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
 ul.product-share li:hover a {
+  color: #ffb938;
+}
+
+ul.product-share2 li:hover a {
   color: #ffb938;
 }
 
@@ -2257,23 +2268,24 @@ a.video-play-btn {
 }
 
 .team-bg-2 {
-  background-image: url(/assets/img/team/perfil_rafa.png);
+  background-image: url(/assets/img/team/perfil_rafa_600x800.png);
 }
 
 .team-bg-3 {
-  background-image: url(/assets/img/team/alexis_perfil.png);
+  background-image: url(/assets/img/team/FotoAlexis.jpg);
 }
 
 .team-bg-4 {
-  background-image: url(/assets/img/team/rodrigo_perfil.png);
+  background-image: url(/assets/img/team/Rodri_perfil.JPG);
 }
 
 .team-bg-5 {
-  background-image: url(/assets/img/team/marce_perfil.png);
+  background-image: url(/assets/img/team/Marce.jpg);
 }
 
 .team-bg-6 {
-  background-image: url(/assets/img/team/karen_perfil.png);
+  background-image: url(/assets/img/team/karen.jpg);
+
 }
 
 .team-bg {
@@ -2678,14 +2690,30 @@ ul.product-share {
   list-style: none;
 }
 
+ul.product-share2 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 ul.product-share li {
+  display: inline-block;
+}
+
+ul.product-share2 li {
   display: inline-block;
 }
 
 ul.product-share li a {
   display: block;
   color: white;
+
   margin-right: 10px;
+}
+
+ul.product-share2 li a {
+  display: block;
+  color: #373737;
 }
 
 .single-product-content {
@@ -2895,6 +2923,15 @@ table.order-details tbody td {
   padding-bottom: 50px;
   border-radius: 5px;
 }
+
+.single-product-item2 {
+  -webkit-box-shadow: 0 0 20px #e4e4e4;
+  box-shadow: 0 0 20px #e4e4e4;
+  padding-bottom: 50px;
+  border-radius: 5px;
+}
+
+
 
 /* -----------------------------------------------------------------------------
 
