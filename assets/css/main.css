@@ -479,7 +479,7 @@ a.boxed-btn, a.bordered-btn, a.cart-btn {
 
 
 .breadcrumb-bg-km {
-  background-image: url(https://st4.depositphotos.com/2927537/i/600/depositphotos_313987792-stock-photo-close-up-of-musician-group.jpg);
+  background-image: url(/assets/img/products/depositphotos_313987792-stock-photo-close-up-of-musician-group.jpg);
 }
 
 
@@ -1214,6 +1214,7 @@ div.owl-controls div.owl-nav div:hover {
 }
 
 .pagination-wrap ul li a {
+  font-family: roboto;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -2208,19 +2209,27 @@ a.video-play-btn {
 }
 
 .team-bg-1 {
-  background-image: url(../img/team/team-1.jpg);
+  background-image: url(/assets/img/team/lily_perfil.png);
 }
 
 .team-bg-2 {
-  background-image: url(../img/team/team-2.jpg);
+  background-image: url(/assets/img/team/perfil_rafa_600x800.png);
 }
 
 .team-bg-3 {
-  background-image: url(../img/team/team-3.jpg);
+  background-image: url(/assets/img/team/FotoAlexis.jpg);
 }
 
 .team-bg-4 {
-  background-image: url(../img/team/team-4.jpg);
+  background-image: url(/assets/img/team/Rodri_perfil.JPG);
+}
+
+.team-bg-5 {
+  background-image: url(/assets/img/team/Marce.jpg);
+}
+
+.team-bg-6 {
+  background-image: url(/assets/img/team/karen.jpg);
 }
 
 .team-bg {
@@ -2346,7 +2355,22 @@ ul.social-link-team li a {
   border: 1px solid rgb(219, 214, 214);
   box-shadow: 0 5px rgb(185, 181, 181);
   border-radius: 5px;
+  font-size: 15px;
  
+}
+
+.contact-select{
+  width: 48%;
+  height: 49px ;
+  padding: 5px;
+  margin-top: 5px;
+  border: 1px solid rgb(219, 214, 214);
+  box-shadow: 0 5px rgb(185, 181, 181);
+  font-style: normal !important;
+  border-radius: 5px;
+  font-size: 15px !important;
+  color: #686565;
+
 }
 
 .contact-form form p textarea {
@@ -2357,19 +2381,20 @@ ul.social-link-team li a {
   border-radius: 5px;
   width: 100%;
   resize: none;
+ 
 }
 
 .contact-form-wrap {
   background-color: #FBFBFB;
   padding: 45px 30px;
   border-radius: 5px;
-  
+  box-shadow: 0 10px rgb(185, 181, 181);
 }
 
 .contact-form-box {
   padding-left: 40px;
   margin-bottom: 30px;
-  box-shadow: 0 5px rgb(185, 181, 181);
+  box-shadow: 0 5px #ffb938 ;
 }
 
 .contact-form-box h4 {
@@ -2378,6 +2403,13 @@ ul.social-link-team li a {
   position: relative;
   margin-bottom: 10px;
   
+}
+
+.contact-form-select{
+  font-size: 20px;
+  font-weight: 600;
+  position: relative;
+  margin-bottom: 10px;
 }
 
 .contact-form-box h4 i {
@@ -2473,6 +2505,7 @@ ul.social-link-team li a {
 }
 
 .product-filters ul li {
+  font-family:Roboto;
   display: inline-block;
   font-weight: 700;
   font-size: 18px;
@@ -2485,6 +2518,7 @@ ul.social-link-team li a {
 }
 
 .product-filters ul li.active {
+  font-family:Roboto;
   border: 2px solid #ffb938;
   background-color: #ffb938;
   color: #fff;
@@ -2532,10 +2566,10 @@ p.product-price span {
 }
 
 a.cart-btn {
-  font-family: 'Poppins', sans-serif;
+  font-family: Roboto Condensed;
   display: inline-block;
-  background-color: #FFB938;
-  color: white;
+  background-color: #ffb938;
+  color: #fff;
   padding: 10px 20px;
 }
 
