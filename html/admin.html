@@ -6,21 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin</title>
     <!-- fontawesome -->
-	<link rel="stylesheet" href="/assets/css/all.min.css">
-	<!-- bootstrap -->
-	<link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
-	<!-- owl carousel -->
-	<link rel="stylesheet" href="/assets/css/owl.carousel.css">
-	<!-- magnific popup -->
-	<link rel="stylesheet" href="/assets/css/magnific-popup.css">
-	<!-- animate css -->
-	<link rel="stylesheet" href="/assets/css/animate.css">
-	<!-- mean menu css -->
-	<link rel="stylesheet" href="/assets/css/meanmenu.min.css">
-	<!-- main style -->
-	<link rel="stylesheet" href="/assets/css/main.css">
-	<!-- responsive -->
-	<link rel="stylesheet" href="/assets/css/responsive.css">
+    <link rel="stylesheet" href="/assets/css/all.min.css" />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" />
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="/assets/css/owl.carousel.css" />
+    <!-- magnific popup -->
+    <link rel="stylesheet" href="/assets/css/magnific-popup.css" />
+    <!-- animate css -->
+    <link rel="stylesheet" href="/assets/css/animate.css" />
+    <!-- mean menu css -->
+    <link rel="stylesheet" href="/assets/css/meanmenu.min.css" />
+    <!-- main style -->
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <!-- responsive -->
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
     <style>
       form {
         width: 50vw;
@@ -37,8 +37,6 @@
         padding: 1vmin;
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
-       /*  border-radius: 10px 10px 10px 10px;
-        border: 5px solid #898989; */
         color: #525c66;
         font-size: 1em;
         resize: horizontal;
@@ -66,19 +64,81 @@
     </style>
   </head>
   <body>
+    <div class="top-header-area" id="sticker">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-sm-12 text-center">
+            <div class="main-menu-wrap">
+              <!-- logo -->
+              <div class="site-logo">
+                <a href="index.html">
+                  <h2 style = "color: #ffb938; font-family: Bauhaus;">Virtuos</h2>
+                </a>
+              </div>
+              <!-- logo -->
+  
+              <!-- menu start -->
+              <nav class="main-menu">
+                <ul>
+                  <li><a href="about.html">Nosotros</a></li>
+                  <li><a href="contact.html">Contacto</a></li>
+                  <li><a href="shop.html">Tienda</a></li>
+                  <li><a href="login.html">Login</a></li>
+                  <li>
+                    <div class="header-icons">
+                      <a class="shopping-cart" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+                      <a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+                    </div>
+                  </li>
+                </ul>
+              </nav>
+              <a class="mobile-show search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+              <div class="mobile-menu"></div>
+              <!-- menu end -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end header -->
+  
+    <!-- search area -->
+    <div class="search-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <span class="close-btn"><i class="fas fa-window-close"></i></span>
+            <div class="search-bar">
+              <div class="search-bar-tablecell">
+                <h3>Búsqueda:</h3>
+                <input type="text" placeholder="Palabras clave">
+                <button type="submit">Buscar <i class="fas fa-search"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
     <div class="breadcrumb-section breadcrumb-bg-sp">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-8 offset-lg-2 text-center">
-					<div class="breadcrumb-text">
-						<h1>Administrador</h1>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-    <form action="/send-mail" method="POST" name="myForm">
-      <select name="subject" class="custom-select" id="nombreSelect" required>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 offset-lg-2 text-center">
+            <div class="breadcrumb-text">
+              <h1>Administrador</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <form id="productForm" onsubmit="submitProduct()">
+      <select
+        name="productCategory"
+        class="custom-select"
+        id="nombreSelect"
+        required
+      >
         <option selected>Categoría</option>
         <option value="Cuerdas">Cuerdas</option>
         <option value="Viento">Viento</option>
@@ -108,8 +168,17 @@
         placeholder="URL Imagen"
         required
       />
+      <br />
+      <textarea
+        name="productDescription"
+        rows="4"
+        cols="20"
+        placeholder="Descripción"
+        required
+      ></textarea
+      ><br />
       <input
-        type="number"
+        type="text"
         name="productPrice"
         class="form-control"
         id="exampleFormControlInput4"
@@ -122,72 +191,85 @@
     </form>
 
     <div class="footer-area">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-3 col-md-6">
-					<div class="footer-box about-widget">
-						<h2 class="widget-title">About us</h2>
-						<p>Ut enim ad minim veniam perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="footer-box get-in-touch">
-						<h2 class="widget-title">Get in Touch</h2>
-						<ul>
-							<li>34/8, East Hukupara, Gifirtok, Sadan.</li>
-							<li>support@virtuos.com</li>
-							<li>+00 111 222 3333</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="footer-box pages">
-						<h2 class="widget-title">Pages</h2>
-						<ul>
-							<li><a href="index.html">Inicio</a></li>
-							<li><a href="about.html">Acerca</a></li>
-							<li><a href="services.html">Tienda</a></li>
-							<li><a href="contact.html">Contacto</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6">
-					<div class="footer-box subscribe">
-						<h2 class="widget-title">Subscribe</h2>
-						<p>Subscribe to our mailing list to get the latest updates.</p>
-						<form action="index.html">
-							<input type="email" placeholder="Email">
-							<button type="submit"><i class="fas fa-paper-plane"></i></button>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9 col-md-6">
+            <div class="footer-box about-widget">
+              <h2 class="widget-title">Virtuos</h2>
+              <p>
+                Creemos en la música como estilo de vida, con más de 30 años
+                vendiendo los mejores productos en la rama musical.
+              </p>
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-box subscribe">
+              <h2 class="widget-title">Encuéntranos</h2>
+              <ul class="product-share">
+                <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                <li><a href=""><i class="fab fa-google-plus-g"></i></a></li>
+                <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jquery -->
+    <script src="/assets/js/jquery-1.11.3.min.js"></script>
+    <!-- bootstrap -->
+    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+    <!-- count down -->
+    <script src="/assets/js/jquery.countdown.js"></script>
+    <!-- isotope -->
+    <script src="/assets/js/jquery.isotope-3.0.6.min.js"></script>
+    <!-- waypoints -->
+    <script src="/assets/js/waypoints.js"></script>
+    <!-- owl carousel -->
+    <script src="/assets/js/owl.carousel.min.js"></script>
+    <!-- magnific popup -->
+    <script src="/assets/js/jquery.magnific-popup.min.js"></script>
+    <!-- mean menu -->
+    <script src="/assets/js/jquery.meanmenu.min.js"></script>
+    <!-- sticker js -->
+    <script src="/assets/js/sticker.js"></script>
+    <!-- main js -->
+    <script src="/assets/js/main.js"></script>
 
     <script>
+      function submitProduct() {
+        let form = document.getElementById("productForm");
+        let productName = form.elements["productName"].value;
+        let productImg = form.elements["productImg"].value;
+        let productSupplier = form.elements["productSupplier"].value;
+        let productCategory = form.elements["productCategory"].value;
+        let productPrice = form.elements["productPrice"].value;
+        let productDescription = form.elements["productDescription"].value;
+       
+        const product={
+            name: productName, 
+            img: productImg, 
+            category: productCategory,
+            supplier: productSupplier,
+            price: productPrice,
+            description: productDescription
+        };
+        if(localStorage.productList == null){
+            let list = [];
+            list.push(product);
+            alert(JSON.stringify(list))
+            localStorage.setItem("productList", JSON.stringify(list));
 
+        }else{
+            let list = JSON.parse(localStorage.productList);
+            list.push(product);
+            localStorage.productList = JSON.stringify(list);
+        }
+            
+      }
     </script>
-    	<!-- jquery -->
-	<script src="/assets/js/jquery-1.11.3.min.js"></script>
-	<!-- bootstrap -->
-	<script src="/assets/bootstrap/js/bootstrap.min.js"></script>
-	<!-- count down -->
-	<script src="/assets/js/jquery.countdown.js"></script>
-	<!-- isotope -->
-	<script src="/assets/js/jquery.isotope-3.0.6.min.js"></script>
-	<!-- waypoints -->
-	<script src="/assets/js/waypoints.js"></script>
-	<!-- owl carousel -->
-	<script src="/assets/js/owl.carousel.min.js"></script>
-	<!-- magnific popup -->
-	<script src="/assets/js/jquery.magnific-popup.min.js"></script>
-	<!-- mean menu -->
-	<script src="/assets/js/jquery.meanmenu.min.js"></script>
-	<!-- sticker js -->
-	<script src="/assets/js/sticker.js"></script>
-	<!-- main js -->
-	<script src="/assets/js/main.js"></script>
-
   </body>
 </html>
