@@ -2868,6 +2868,14 @@ table.order-details tbody td {
   border-radius: 5px;
 }
 
+.single-product-item2 {
+  -webkit-box-shadow: 0 0 20px #e4e4e4;
+  box-shadow: 0 0 20px #e4e4e4;
+  padding-bottom: 50px;
+  border-radius: 5px;
+  
+}
+
 /* -----------------------------------------------------------------------------
 
 # 404 Page Styles
