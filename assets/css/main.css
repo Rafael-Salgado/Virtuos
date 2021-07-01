@@ -479,7 +479,7 @@ a.boxed-btn, a.bordered-btn, a.cart-btn {
 
 
 .breadcrumb-bg-km {
-  background-image: url(https://st4.depositphotos.com/2927537/i/600/depositphotos_313987792-stock-photo-close-up-of-musician-group.jpg);
+  background-image: url(/assets/img/products/depositphotos_313987792-stock-photo-close-up-of-musician-group.jpg);
 }
 
 
@@ -891,18 +891,21 @@ a.mobile-show {
 .footer-area {
   background-color: #373737;
   color: #fff;
-  padding: 150px 0;
+  padding: 1rem;
 }
 
 h2.widget-title {
-  font-size: 24px;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 700;
   position: relative;
   padding-bottom: 20px;
   color: #fff;
 }
 
-h2.widget-title:after {
+h2.widget-title:hover{
+  color: #ffb938;
+}
+/*h2.widget-title:after {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -910,7 +913,7 @@ h2.widget-title:after {
   height: 2px;
   background-color: #ffb938;
   content: "";
-}
+}*/
 
 .footer-box p {
   color: #fff;
@@ -1083,8 +1086,8 @@ a.video-play-btn {
 }
 
 a.video-play-btn:hover {
-  background-color: #333;
-  color: #ffb938;
+  background-color: #373737;
+  color: #FFB938;
 }
 
 .latest-news-bg {
@@ -1218,6 +1221,7 @@ div.owl-controls div.owl-nav div:hover {
 }
 
 .pagination-wrap ul li a {
+  font-family: roboto;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -2116,8 +2120,8 @@ p.testimonial-body {
 ----------------------------------------------------------------------------- */
 a.video-play-btn {
   position: absolute;
-  background-color: #ffb938;
-  color: #373737;
+  background-color: #FFB938;
+  color: white;
   width: 90px;
   height: 90px;
   text-align: center;
@@ -2244,19 +2248,27 @@ a.video-play-btn {
 }
 
 .team-bg-1 {
-  background-image: url(../img/team/team-1.jpg);
+  background-image: url(/assets/img/team/lily_perfil.png);
 }
 
 .team-bg-2 {
-  background-image: url(../img/team/team-2.jpg);
+  background-image: url(/assets/img/team/perfil_rafa.png);
 }
 
 .team-bg-3 {
-  background-image: url(../img/team/team-3.jpg);
+  background-image: url(/assets/img/team/alexis_perfil.png);
 }
 
 .team-bg-4 {
-  background-image: url(../img/team/team-4.jpg);
+  background-image: url(/assets/img/team/rodrigo_perfil.png);
+}
+
+.team-bg-5 {
+  background-image: url(/assets/img/team/marce_perfil.png);
+}
+
+.team-bg-6 {
+  background-image: url(/assets/img/team/karen_perfil.png);
 }
 
 .team-bg {
@@ -2509,6 +2521,7 @@ ul.social-link-team li a {
 }
 
 .product-filters ul li {
+  font-family:Roboto;
   display: inline-block;
   font-weight: 700;
   font-size: 18px;
@@ -2521,6 +2534,7 @@ ul.social-link-team li a {
 }
 
 .product-filters ul li.active {
+  font-family:Roboto;
   border: 2px solid #ffb938;
   background-color: #ffb938;
   color: #fff;
@@ -2528,6 +2542,12 @@ ul.social-link-team li a {
 
 .single-product-item {
   margin-bottom: 30px;
+
+}
+
+.single-product-item1:hover{
+  margin-bottom: 30px;
+  background-color: white;
 }
 
 .product-image {
@@ -2562,10 +2582,10 @@ p.product-price span {
 }
 
 a.cart-btn {
-  font-family: 'Poppins', sans-serif;
+  font-family: Roboto Condensed;
   display: inline-block;
-  background-color: #FFB938;
-  color: white;
+  background-color: #ffb938;
+  color: #fff;
   padding: 10px 20px;
 }
 
@@ -2636,7 +2656,7 @@ ul.product-share li {
 
 ul.product-share li a {
   display: block;
-  color: #373737;
+  color: white;
   margin-right: 10px;
 }
 
