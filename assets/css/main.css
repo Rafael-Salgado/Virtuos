@@ -2394,7 +2394,22 @@ ul.social-link-team li a {
   border: 1px solid rgb(219, 214, 214);
   box-shadow: 0 5px rgb(185, 181, 181);
   border-radius: 5px;
+  font-size: 15px;
  
+}
+
+.contact-select{
+  width: 48%;
+  height: 49px ;
+  padding: 5px;
+  margin-top: 5px;
+  border: 1px solid rgb(219, 214, 214);
+  box-shadow: 0 5px rgb(185, 181, 181);
+  font-style: normal !important;
+  border-radius: 5px;
+  font-size: 15px !important;
+  color: #686565;
+
 }
 
 .contact-form form p textarea {
@@ -2405,19 +2420,20 @@ ul.social-link-team li a {
   border-radius: 5px;
   width: 100%;
   resize: none;
+ 
 }
 
 .contact-form-wrap {
   background-color: #FBFBFB;
   padding: 45px 30px;
   border-radius: 5px;
-  
+  box-shadow: 0 10px rgb(185, 181, 181);
 }
 
 .contact-form-box {
   padding-left: 40px;
   margin-bottom: 30px;
-  box-shadow: 0 5px rgb(185, 181, 181);
+  box-shadow: 0 5px #ffb938 ;
 }
 
 .contact-form-box h4 {
@@ -2426,6 +2442,13 @@ ul.social-link-team li a {
   position: relative;
   margin-bottom: 10px;
   
+}
+
+.contact-form-select{
+  font-size: 20px;
+  font-weight: 600;
+  position: relative;
+  margin-bottom: 10px;
 }
 
 .contact-form-box h4 i {
