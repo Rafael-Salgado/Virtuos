@@ -118,28 +118,26 @@
 	<!-- end breadcrumb section -->
 
 	<!-- login -->
+<div class="container">
+	<br>
+	<div id="regisAlert" class="alert alert-danger" role="alert" hidden="true">
+	</div>
+	<br>
 
-  <!-- <br>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="alert alert-success">
-          <button id="alert" class="close" data-dismiss="alert"><span>&times;</span></button>Registro exitoso
-        </div>
-      </div>
-    </div>
-    <button id="alert"></p>-->
 <br>
-  <form id="miformulario" onsubmit="verificarPasswords(); return false" enctype="text/plain"name="myForm" class="formulario" >
-    <input type="text" class="form-control" placeholder="Nombres" aria-label="First name" required  title="Escribir en mayúsculas de A-Z.">
-    <input type="text" class="form-control" placeholder="Apellidos" aria-label="First name" required>
-    <input type="email" class="form-control" id="exampleFormControlInput3" placeholder="nombre@ejemplo.com" required title="Tiene que ser un correo válido">
-    <input type="text" class="form-control" id="exampleFormControlInput4" placeholder="5555-5555" required">
+  <form id="miformulario" onsubmit="verificarDatos()" enctype="text/plain" name="myForm" class="formulario" >
+    <input type="text" id="nombre" class="form-control" placeholder="Nombres" aria-label="First name" required  title="Escribir en mayúsculas de A-Z.">
+    <input type="text" id="apellidos" class="form-control" placeholder="Apellidos" aria-label="First name" required>
+    <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com" required title="Tiene que ser un correo válido">
+    <input type="text" class="form-control" id="phone" placeholder="5555-5555" required>
     <input type="password" class="form-control" id="pass1" placeholder="Contraseña" required>
     <input type="password" class="form-control" id="pass2" placeholder="Validar contraseña"required>
     
     <button value="submit" class="btn btn-warning btn-lg">Registrarme</button>
     </form>
 
+</div>
+	
 
 	<!-- end cart -->
 
@@ -241,6 +239,7 @@
 	<script src="/assets/js/main.js"></script>
   <!-- bootstrap alerts-->
 
+	<script src="/assets/js/login.js"></script>
 
 </body>
 </html>
