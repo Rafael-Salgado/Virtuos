@@ -100,7 +100,7 @@
         });
         
         // isotop inner
-       
+
         // magnific popup
         $('.popup-youtube').magnificPopup({
             disableOn: 700,
