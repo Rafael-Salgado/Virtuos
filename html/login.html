@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,6 +21,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap"
       rel="stylesheet"
     />
+
 	<!-- fontawesome -->
 	<link rel="stylesheet" href="/assets/css/all.min.css">
 	<!-- bootstrap -->
@@ -38,6 +38,8 @@
 	<link rel="stylesheet" href="/assets/css/main.css">
 	<!-- responsive -->
 	<link rel="stylesheet" href="/assets/css/responsive.css">
+  <!--js-->
+  <link rel="stylesheet" href="js/login.js"
 
 </head>
 <body>
@@ -101,13 +103,13 @@
 	<!-- end search arewa -->
 	
 	<!-- breadcrumb-section -->
-	<div class="breadcrumb-section breadcrumb-bg-cart">
+	<div class="breadcrumb-section breadcrumb-bg-log">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 offset-lg-2 text-center">
 					<div class="breadcrumb-text">
-						<p>Intensidad y Armonía</p>
-						<h1>Compras</h1>
+						<p>Cadencia y Composición</p>
+						<h1> Regístrate</h1>
 					</div>
 				</div>
 			</div>
@@ -115,94 +117,30 @@
 	</div>
 	<!-- end breadcrumb section -->
 
-	<!-- cart -->
-	<div class="cart-section mt-150 mb-150">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-8 col-md-12">
-					<div class="cart-table-wrap">
-						<table class="cart-table">
-							<thead class="cart-table-head">
-								<tr class="table-head-row">
-									<th class="product-remove"></th>
-									<th class="product-image">Producto</th>
-									<th class="product-name">Nombre</th>
-									<th class="product-price">Precio</th>
-									<th class="product-quantity">Cantidad</th>
-									<th class="product-total">Total</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr class="table-body-row">
-									<td class="product-remove"><a href="#"><i class="far fa-window-close"></i></a></td>
-									<td class="product-image"><img src="https://cdn.shopify.com/s/files/1/0253/8618/8834/products/17e997227059_480x480@2x.jpg?v=1595029657" alt="a"></td>
-									<td class="product-name">Guitarra Clásica</td>
-									<td class="product-price">$85</td>
-									<td class="product-quantity"><input type="number" placeholder="0"></td>
-									<td class="product-total">1</td>
-								</tr>
-								<tr class="table-body-row">
-									<td class="product-remove"><a href="#"><i class="far fa-window-close"></i></a></td>
-									<td class="product-image"><img src="https://t4.ftcdn.net/jpg/00/17/56/27/360_F_17562784_aAbERlYCAvYPL1q7ZgP50RUtAev12TVS.jpg" alt="b"></td>
-									<td class="product-name">Chelo</td>
-									<td class="product-price">$70</td>
-									<td class="product-quantity"><input type="number" placeholder="0"></td>
-									<td class="product-total">1</td>
-								</tr>
-								<tr class="table-body-row">
-									<td class="product-remove"><a href="#"><i class="far fa-window-close"></i></a></td>
-									<td class="product-image"><img src="https://ss631.liverpool.com.mx/xl/55193142.jpg" alt="c"></td>
-									<td class="product-name">Piano
-									</td>
-									<td class="product-price">$35</td>
-									<td class="product-quantity"><input type="number" placeholder="0"></td>
-									<td class="product-total">1</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
+	<!-- login -->
 
-				<div class="col-lg-4">
-					<div class="total-section">
-						<table class="total-table">
-							<thead class="total-table-head">
-								<tr class="table-total-row">
-									<th>Total</th>
-									<th>Precio</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr class="total-data">
-									<td><strong>Subtotal: </strong></td>
-									<td>$500</td>
-								</tr>
-								<tr class="total-data">
-									<td><strong>Envío: </strong></td>
-									<td>$45</td>
-								</tr>
-								<tr class="total-data">
-									<td><strong>Total: </strong></td>
-									<td>$545</td>
-								</tr>
-							</tbody>
-						</table>
-						<div class="cart-buttons">
-							<a href="cart.html" class="boxed-btn">Update Cart</a>
-							<a href="checkout.html" class="boxed-btn black">Check Out</a>
-							
-						</div>
-					</div>
+  <!-- <br>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="alert alert-success">
+          <button id="alert" class="close" data-dismiss="alert"><span>&times;</span></button>Registro exitoso
+        </div>
+      </div>
+    </div>
+    <button id="alert"></p>-->
+<br>
+  <form id="miformulario" onsubmit="verificarPasswords(); return false" enctype="text/plain"name="myForm" class="formulario" >
+    <input type="text" class="form-control" placeholder="Nombres" aria-label="First name" required  title="Escribir en mayúsculas de A-Z.">
+    <input type="text" class="form-control" placeholder="Apellidos" aria-label="First name" required>
+    <input type="email" class="form-control" id="exampleFormControlInput3" placeholder="nombre@ejemplo.com" required title="Tiene que ser un correo válido">
+    <input type="text" class="form-control" id="exampleFormControlInput4" placeholder="5555-5555" required">
+    <input type="password" class="form-control" id="pass1" placeholder="Contraseña" required>
+    <input type="password" class="form-control" id="pass2" placeholder="Validar contraseña"required>
+    
+    <button value="submit" class="btn btn-warning btn-lg">Registrarme</button>
+    </form>
 
 
-							</div>
-					
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
 	<!-- end cart -->
 
 	<!-- logo carousel -->
@@ -301,6 +239,8 @@
 	<script src="/assets/js/sticker.js"></script>
 	<!-- main js -->
 	<script src="/assets/js/main.js"></script>
+  <!-- bootstrap alerts-->
+
 
 </body>
 </html>
