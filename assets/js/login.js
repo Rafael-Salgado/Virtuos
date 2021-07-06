@@ -1,3 +1,16 @@
+function isLogged(){
+  var loggeo = localStorage.getItem('isLoggedIn');
+  if (loggeo == 1)
+  {
+    document.getElementById('sesion').innerHTML = "Mi cuenta";
+    document.getElementById('sesion').href = "micuenta.html";
+  }
+}
+function logout(){
+  var loggeo = localStorage.setItem('isLoggedIn', 0);
+}
+
+
 function loginData(){
   let user = document.getElementById('loginemail').value;
   let pass = document.getElementById('loginpass1').value;
@@ -8,9 +21,11 @@ var originalText = bytes.toString(CryptoJS.enc.Utf8);
 if(data==originalText)
 {
   document.getElementById('loginVal').innerHTML = "Login exitoso!";
+  localStorage.setItem('isLoggedIn', 1)
 }
 else{
   document.getElementById('loginVal').innerHTML = "Usuario y/o Contraseña inválidos.";
+  localStorage.setItem('isLoggedIn', 0)
 }
 }
 function verificarDatos(){
@@ -27,7 +42,6 @@ function verificarDatos(){
   let pass2 = document.getElementById('pass2').value;
   let token = email+pass1;
   let cipherText = CryptoJS.AES.encrypt(token, "codingatthedisco").toString();
-  localStorage.setItem("sessionToken",cipherText);
   nombre = nombre.trim();
   if (!(/^[a-zA-Z\s]+$/.test(nombre))){
     alert.innerHTML = "Nombre invalido (a-z, A-Z)";
@@ -57,12 +71,16 @@ function verificarDatos(){
               alert.innerHTML = "Tus datos fueron enviados!";
               register();
               clearData();
-              //crear objeto y pasarlo a login(objeto)
+              localStorage.setItem("sessionToken",cipherText);
             }
           }
         }
       }
   }
+}
+function yuser(){
+  var iuser = JSON.parse(localStorage.getItem('userName'));
+  document.getElementById("misdatos").innerHTML = "Nombre: "+iuser.usuarioNombre+" "+iuser.usuarioApellido+"<br>Email: "+iuser.usuarioEmail+"<br>Telefono: "+iuser.usuarioPhone;
 }
 
 function register (){
@@ -70,15 +88,13 @@ function register (){
   let apellidos = document.getElementById('apellidos').value;
   let email = document.getElementById('email').value;
   let phone = document.getElementById('phone').value;
-  let pass1 = document.getElementById('pass1').value;
-  let pass2 = document.getElementById('pass2').value;
   const usuario ={
     usuarioNombre: nombre,
     usuarioApellido: apellidos,
     usuarioEmail: email,
     usuarioPhone: phone,
-    usuarioPass1: pass1
   };
+localStorage.setItem("userName", JSON.stringify(usuario));
 }
 
 function clearData(){
