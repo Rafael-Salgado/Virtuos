@@ -28,7 +28,7 @@ addItem({
   name: "Piano",
   img: "https://d1aeri3ty3izns.cloudfront.net/media/67/671442/600/preview.jpg",
   category: "cuerdas",
-  sound: "/assets/sounds/SGD.ogg",
+  sound: "/assets/sounds/SPD.ogg",
   supplier: "Yamaha",
   price: "10,000.00",
   description:
