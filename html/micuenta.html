@@ -27,6 +27,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap"
       rel="stylesheet"
     />
+
     <!-- fontawesome -->
     <link rel="stylesheet" href="/assets/css/all.min.css" />
     <!-- bootstrap -->
@@ -43,8 +44,12 @@
     <link rel="stylesheet" href="/assets/css/main.css" />
     <!-- responsive -->
     <link rel="stylesheet" href="/assets/css/responsive.css" />
+    <!--js-->
+    <link rel="stylesheet" href="js/login.js" />
+    <!-- login style -->
+    <link rel="stylesheet" href="/assets/css/login-style.css" />
   </head>
-  <body onload="isLogged()">
+  <body onload="isLogged(), yuser()">
     <!-- header -->
     <div class="top-header-area" id="sticker">
       <div class="container">
@@ -98,9 +103,11 @@
             <span class="close-btn"><i class="fas fa-window-close"></i></span>
             <div class="search-bar">
               <div class="search-bar-tablecell">
-              <h3>Búsqueda:</h3>
-							<input type="text" placeholder="Palabras clave">
-							<button type="submit">Buscar <i class="fas fa-search"></i></button>
+                <h3>Búsqueda:</h3>
+                <input type="text" placeholder="Palabras clave" />
+                <button type="submit">
+                  Buscar <i class="fas fa-search"></i>
+                </button>
               </div>
             </div>
           </div>
@@ -110,13 +117,13 @@
     <!-- end search arewa -->
 
     <!-- breadcrumb-section -->
-    <div class="breadcrumb-section breadcrumb-bg-km">
+    <div class="breadcrumb-section breadcrumb-bg-log">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 offset-lg-2 text-center">
             <div class="breadcrumb-text">
-              <p>RITMO Y MELODIA</p>
-              <h1>TIENDA</h1>
+              <p>Me dejo chiquear.</p>
+              <h1>Mi cuenta</h1>
             </div>
           </div>
         </div>
@@ -124,85 +131,69 @@
     </div>
     <!-- end breadcrumb section -->
 
-    <!-- products -->
-    <div class="product-section mt-80 mb-150">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="product-filters">
-              <ul>
-                <li class="active" data-filter="*">Todo</li>
-                <li data-filter=".cuerdas">Cuerdas</li>
-                <li data-filter=".viento">Viento</li>
-                <li data-filter=".percusion">Percusión</li>
-              </ul>
-            </div>
+    <!-- login -->
+    <div class="container mb-150">
+      <br />
+      <div
+        id="regisAlert"
+        class="alert alert-danger"
+        role="alert"
+        hidden="true"
+      ></div>
+      <br />
+
+      <br />
+      <div class="tabs">
+        <div class="tab-header">
+          <div class="active">
+            <i>Mis pedidos</i>
+          </div>
+          <div>
+            <i>Mis datos</i>
           </div>
         </div>
-
-        <div id="list-items" class="row product-lists">
-
-
-         <!--  <div class="row">
-            <div class="col-lg-12 text-center">
-              <div class="pagination-wrap">
-                <ul>
-                  <li><a href="#">Anterior</a></li>
-                  <li><a href="#">1</a></li>
-                  <li><a class="active" href="#">2</a></li>
-                  <li><a href="#">3</a></li>
-                  <li><a href="#">Siguiente</a></li>
-                </ul>
-              </div>
-            </div>
-          </div> -->
-        </div>
-      </div>
-    </div>
-    <!-- end products -->
-
-    <!-- logo carousel -->
-    <div class="logo-carousel-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="logo-carousel-inner">
-              <div class="single-logo-item">
-                <img
-                  src="https://logos-marcas.com/wp-content/uploads/2020/11/Yamaha-Motor-Company-Logo.png"
-                  alt=""
-                />
-              </div>
-              <div class="single-logo-item">
-                <img
-                  src="https://1000marcas.net/wp-content/uploads/2020/02/Logo-Fender.png"
-                  alt=""
-                />
-              </div>
-              <div class="single-logo-item">
-                <img
-                  src="https://1000marcas.net/wp-content/uploads/2020/11/Marshall-Logo.png"
-                  alt=""
-                />
-              </div>
-              <div class="single-logo-item">
-                <img
-                  src="https://1000marcas.net/wp-content/uploads/2020/02/Logo-Ibanez.png"
-                  alt=""
-                />
-              </div>
-              <div class="single-logo-item">
-                <img
-                  src="https://1000marcas.net/wp-content/uploads/2020/02/logo-Gibson.png"
-                  alt=""
-                />
-              </div>
-            </div>
+        <div class="tab-indicator"></div>
+        <div class="tab-body">
+          <div class="active">
+            <!--   Form User login -->
+            <form
+              id="miformulario1"
+              action="index.html"
+              enctype="text/plain"
+              name="myForm"
+              class="form-lili"
+            >
+            <p id="pedi2" style="color: #ffb938;">Pedido 45689539 hecho 07/Feb/2021<br>
+              Pedido 45689678 hecho 16/Abr/2021</p><br>
+        <button value="submit" class="btn btn-warning btn-lg button-lili" style="align-self: center;" onclick="logout()">
+          Cerrar sesión
+        </button>
+            </form>
+            <!--  End form user login -->
+          </div>
+          <div>
+			  <!-- Form user sign up -->
+        <form
+        id="cierroses"
+        action="index.html"
+        enctype="text/plain"
+        name="myForm"
+        class="form-lili"
+      >
+			<!-- User name -->
+              <p id="misdatos" style="color: #ffb938;"></p>
+              <button value="submit" class="btn btn-warning btn-lg button-lili" style="align-self: center;" onclick="logout()">
+                Cerrar sesión
+              </button>
+            </form>
+			<!-- End user sign up -->
           </div>
         </div>
       </div>
     </div>
-    <!-- end logo carousel -->
+    </div>
+
+    <!-- end cart -->
 
     <!-- footer -->
     <div class="footer-area">
@@ -217,15 +208,23 @@
               </p>
             </div>
           </div>
-          
+
           <div class="col-lg-3 col-md-6">
             <div class="footer-box subscribe">
               <h2 class="widget-title">Encuéntranos</h2>
               <ul class="product-share">
-                <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href=""><i class="fab fa-twitter"></i></a></li>
-                <li><a href=""><i class="fab fa-google-plus-g"></i></a></li>
-                <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                <li>
+                  <a href=""><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li>
+                  <a href=""><i class="fab fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href=""><i class="fab fa-google-plus-g"></i></a>
+                </li>
+                <li>
+                  <a href=""><i class="fab fa-linkedin"></i></a>
+                </li>
               </ul>
             </div>
           </div>
@@ -233,6 +232,7 @@
       </div>
     </div>
     <!-- end footer -->
+
 
     <!-- jquery -->
     <script src="/assets/js/jquery-1.11.3.min.js"></script>
@@ -254,8 +254,10 @@
     <script src="/assets/js/sticker.js"></script>
     <!-- main js -->
     <script src="/assets/js/main.js"></script>
-    <!-- products -->
-    <script src="/assets/js/load.products.js"></script>
+    <!-- bootstrap alerts-->
+
     <script src="/assets/js/login.js"></script>
-  </body>
+    <script src="/node_modules/crypto-js/crypto-js.js"></script>
+    <script src="/assets/js/login-script.js"></script>
+   </body>
 </html>
