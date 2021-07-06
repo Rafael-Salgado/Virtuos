@@ -158,8 +158,8 @@
           <div class="active">
             <!--   Form User login -->
             <form
-              id="miformulario"
-              onsubmit="verificarDatos()"
+              id="miformulario1"
+              onsubmit="return false"
               enctype="text/plain"
               name="myForm"
               class="form-lili"
@@ -168,7 +168,7 @@
               <input
                 type="email"
                 class="form-control input-lili"
-                id="email"
+                id="loginemail"
                 placeholder="nombre@ejemplo.com"
                 required
                 title="Tiene que ser un correo válido"
@@ -177,11 +177,12 @@
               <input
                 type="password"
                 class="form-control input-lili"
-                id="pass1"
+                id="loginpass1"
                 placeholder="Contraseña"
                 required
               />
-              <button value="submit" class="btn btn-warning btn-lg button-lili">
+			  <p id="loginVal" style="color: #ffb938;"></p>
+              <button value="submit" class="btn btn-warning btn-lg button-lili" onclick="loginData()">
                 Ingresar
               </button>
             </form>
@@ -191,7 +192,7 @@
 			  <!-- Form user sign up -->
             <form
               id="miformulario"
-              onsubmit="verificarDatos()"
+              onsubmit="return false"
               enctype="text/plain"
               name="myForm"
               class="form-lili"
@@ -249,7 +250,7 @@
                 required
               />
 
-              <button value="submit" class="btn btn-warning btn-lg button-lili">
+              <button value="submit" class="btn btn-warning btn-lg button-lili" onclick="verificarDatos()">
                 Registrarme
               </button>
             </form>

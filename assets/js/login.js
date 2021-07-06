@@ -1,3 +1,18 @@
+function loginData(){
+  let user = document.getElementById('loginemail').value;
+  let pass = document.getElementById('loginpass1').value;
+  let data = user+pass;
+  var tk = localStorage.getItem("sessionToken");
+var bytes = CryptoJS.AES.decrypt(tk, "codingatthedisco");
+var originalText = bytes.toString(CryptoJS.enc.Utf8);
+if(data==originalText)
+{
+  document.getElementById('loginVal').innerHTML = "Login exitoso!";
+}
+else{
+  document.getElementById('loginVal').innerHTML = "Usuario y/o Contraseña inválidos.";
+}
+}
 function verificarDatos(){
   //verificar que todos los datos estén correctos
   let isValid = false;
@@ -64,7 +79,6 @@ function register (){
     usuarioPhone: phone,
     usuarioPass1: pass1
   };
-  alert (JSON.stringify(usuario))
 }
 
 function clearData(){
