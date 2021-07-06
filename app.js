@@ -81,6 +81,9 @@ router.get("/product", function (req, res) {
 router.get("/car", function (req, res) {
   res.sendFile(path.join(__dirname + "/html/cart.html"));
 });
+router.get("/account", function (req, res) {
+  res.sendFile(path.join(__dirname + "/html/micuenta.html"));
+});
 
 router.post("/send-mail", function (req, res) {
    let message = `Phone: ${req.body.phone}\nName: ${req.body.name}\nEmail: ${req.body.email}\n${req.body.message}`

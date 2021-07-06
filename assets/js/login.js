@@ -3,7 +3,7 @@ function isLogged(){
   if (loggeo == 1)
   {
     document.getElementById('sesion').innerHTML = "Mi cuenta";
-    document.getElementById('sesion').href = "micuenta.html";
+    document.getElementById('sesion').href = "/account";
   }
 }
 function logout(){
