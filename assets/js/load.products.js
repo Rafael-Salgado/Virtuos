@@ -127,7 +127,7 @@ addItem({
   name: "Violín",
   img: "https://res.cloudinary.com/walmart-labs/image/upload/w_960,dpr_auto,f_auto,q_auto:best/mg/gm/3pp/asr/aba8435b-1bcd-4c76-a2d8-2c4155bb06d4.6b298595f5be5cdd8917ff782f4f1d23.jpeg?odnHeight=2000&odnWidth=2000&odnBg=ffffff",
   category: "cuerdas",
-  sound: "/assets/sounds/guitarra2.ogg",
+  sound: "/assets/sounds/SVD.ogg",
   supplier: "Yamaha",
   price: "20,000.00",
   description:
