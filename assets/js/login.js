@@ -1,4 +1,4 @@
-
+import CryptoJS from "crypto-js";
 
 function verificarDatos(){
   //verificar que todos los datos estén correctos
@@ -40,7 +40,7 @@ function verificarDatos(){
               alert.classList.remove('alert-danger');
               alert.classList.add('alert-success')
               alert.innerHTML = "Tus datos fueron enviados!";
-              login();
+              register();
               clearData();
               //crear objeto y pasarlo a login(objeto)
             }
@@ -50,7 +50,7 @@ function verificarDatos(){
   }
 }
 
-function login (){
+function register (){
   let nombre = document.getElementById('nombre').value;
   let apellidos = document.getElementById('apellidos').value;
   let email = document.getElementById('email').value;
