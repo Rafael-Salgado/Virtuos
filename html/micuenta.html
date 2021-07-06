@@ -49,7 +49,7 @@
     <!-- login style -->
     <link rel="stylesheet" href="/assets/css/login-style.css" />
   </head>
-  <body onload="isLogged()">
+  <body onload="isLogged(), yuser()">
     <!-- header -->
     <div class="top-header-area" id="sticker">
       <div class="container">
@@ -58,7 +58,7 @@
             <div class="main-menu-wrap">
               <!-- logo -->
               <div class="site-logo">
-                <a href="/home">
+                <a href="index.html">
                   <h2 style="color: #ffb938; font-family: Bauhaus">Virtuos</h2>
                 </a>
               </div>
@@ -67,15 +67,13 @@
               <!-- menu start -->
               <nav class="main-menu">
                 <ul>
-
-                  <li><a href="/about">Nosotros</a></li>
-                  <li><a href="/contact">Contacto</a></li>
-                  <li><a href="/store">Tienda</a></li>
-                  <li><a href="/login" id="sesion">Login</a></li>
-
+                  <li><a href="about.html">Nosotros</a></li>
+                  <li><a href="contact.html">Contacto</a></li>
+                  <li><a href="shop.html">Tienda</a></li>
+                  <li><a href="login.html" id="sesion">Login</a></li>
                   <li>
                     <div class="header-icons">
-                      <a class="shopping-cart" href="/car"
+                      <a class="shopping-cart" href="cart.html"
                         ><i class="fas fa-shopping-cart"></i
                       ></a>
                       <a class="mobile-hide search-bar-icon" href="#"
@@ -124,8 +122,8 @@
         <div class="row">
           <div class="col-lg-8 offset-lg-2 text-center">
             <div class="breadcrumb-text">
-              <p>Cadencia y Composición</p>
-              <h1>Regístrate</h1>
+              <p>Me dejo chiquear.</p>
+              <h1>Mi cuenta</h1>
             </div>
           </div>
         </div>
@@ -145,14 +143,13 @@
       <br />
 
       <br />
-
       <div class="tabs">
         <div class="tab-header">
           <div class="active">
-            <i>Ingresar</i>
+            <i>Mis pedidos</i>
           </div>
           <div>
-            <i>Registrarse</i>
+            <i>Mis datos</i>
           </div>
         </div>
         <div class="tab-indicator"></div>
@@ -161,105 +158,39 @@
             <!--   Form User login -->
             <form
               id="miformulario1"
-              action="micuenta.html"
+              action="index.html"
               enctype="text/plain"
               name="myForm"
               class="form-lili"
             >
-              <!-- User email -->
-              <input
-                type="email"
-                class="form-control input-lili"
-                id="loginemail"
-                placeholder="nombre@ejemplo.com"
-                required
-                title="Tiene que ser un correo válido"
-              />
-              <!-- User password -->
-              <input
-                type="password"
-                class="form-control input-lili"
-                id="loginpass1"
-                placeholder="Contraseña"
-                required
-              />
-			  <p id="loginVal" style="color: #ffb938;"></p>
-              <button value="submit" class="btn btn-warning btn-lg button-lili" onclick="loginData()">
-                Ingresar
-              </button>
+            <p id="pedi2" style="color: #ffb938;">Pedido 45689539 hecho 07/Feb/2021<br>
+              Pedido 45689678 hecho 16/Abr/2021</p><br>
+        <button value="submit" class="btn btn-warning btn-lg button-lili" style="align-self: center;" onclick="logout()">
+          Cerrar sesión
+        </button>
             </form>
             <!--  End form user login -->
           </div>
           <div>
 			  <!-- Form user sign up -->
-            <form
-              id="miformulario"
-              onsubmit="return false"
-              enctype="text/plain"
-              name="myForm"
-              class="form-lili"
-            >
+        <form
+        id="cierroses"
+        action="index.html"
+        enctype="text/plain"
+        name="myForm"
+        class="form-lili"
+      >
 			<!-- User name -->
-              <input
-                type="text"
-                id="nombre"
-                class="form-control input-lili"
-                placeholder="Nombres"
-                aria-label="First name"
-                required
-                title="Escribir en mayúsculas de A-Z."
-              />
-			 <!--  User last name -->
-              <input
-                type="text"
-                id="apellidos"
-                class="form-control input-lili"
-                placeholder="Apellidos"
-                aria-label="First name"
-                required
-              />
-			<!--   User email -->
-              <input
-                type="email"
-                class="form-control input-lili"
-                id="email"
-                placeholder="nombre@ejemplo.com"
-                required
-                title="Tiene que ser un correo válido"
-              />
-			 <!--  User phone -->
-              <input
-                type="text"
-                class="form-control input-lili"
-                id="phone"
-                placeholder="5555-5555"
-                required
-              />
-			  <!-- User password -->
-              <input
-                type="password"
-                class="form-control input-lili"
-                id="pass1"
-                placeholder="Contraseña"
-                required
-              />
-			  <!-- User confirm password -->
-              <input
-                type="password"
-                class="form-control input-lili"
-                id="pass2"
-                placeholder="Validar contraseña"
-                required
-              />
-
-              <button value="submit" class="btn btn-warning btn-lg button-lili" onclick="verificarDatos()">
-                Registrarme
+              <p id="misdatos" style="color: #ffb938;"></p>
+              <button value="submit" class="btn btn-warning btn-lg button-lili" style="align-self: center;" onclick="logout()">
+                Cerrar sesión
               </button>
             </form>
 			<!-- End user sign up -->
           </div>
         </div>
       </div>
+    </div>
     </div>
 
     <!-- end cart -->

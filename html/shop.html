@@ -44,7 +44,7 @@
     <!-- responsive -->
     <link rel="stylesheet" href="/assets/css/responsive.css" />
   </head>
-  <body>
+  <body onload="isLogged()">
     <!-- header -->
     <div class="top-header-area" id="sticker">
       <div class="container">
@@ -62,10 +62,12 @@
               <!-- menu start -->
               <nav class="main-menu">
                 <ul>
+
                   <li><a href="/about">Nosotros</a></li>
                   <li><a href="/contact">Contacto</a></li>
                   <li><a href="/shop">Tienda</a></li>
-                  <li><a href="/login">Login</a></li>
+                  <li><a href="/login" id="sesion">Login</a></li>
+
                   <li>
                     <div class="header-icons">
                       <a class="shopping-cart" href="/car"
@@ -256,5 +258,6 @@
     <script src="/assets/js/main.js"></script>
     <!-- products -->
     <script src="/assets/js/load.products.js"></script>
+    <script src="/assets/js/login.js"></script>
   </body>
 </html>
