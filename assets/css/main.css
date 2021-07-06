@@ -2050,7 +2050,6 @@ background-color: white;
 .form-lili{
   padding: 3vw;
   max-width: 500px;
-  background-color: #373737;
   margin: 0 auto;
 }
 
@@ -2075,6 +2074,9 @@ form .button-lili {
 	font-size: 1em; 
 	color: 	white;
   font-family: "Roboto", sans-serif;
+  width:50%;
+  margin-left:25%;
+  margin-right:25%;
 }
 form .button-lili hover{
 	background-color: #525c66;
