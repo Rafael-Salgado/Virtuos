@@ -1,5 +1,18 @@
-import CryptoJS from "crypto-js";
-
+function loginData(){
+  let user = document.getElementById('loginemail').value;
+  let pass = document.getElementById('loginpass1').value;
+  let data = user+pass;
+  var tk = localStorage.getItem("sessionToken");
+var bytes = CryptoJS.AES.decrypt(tk, "codingatthedisco");
+var originalText = bytes.toString(CryptoJS.enc.Utf8);
+if(data==originalText)
+{
+  document.getElementById('loginVal').innerHTML = "Login exitoso!";
+}
+else{
+  document.getElementById('loginVal').innerHTML = "Usuario y/o Contraseña inválidos.";
+}
+}
 function verificarDatos(){
   //verificar que todos los datos estén correctos
   let isValid = false;
@@ -12,7 +25,9 @@ function verificarDatos(){
   let phone = document.getElementById('phone').value;
   let pass1 = document.getElementById('pass1').value;
   let pass2 = document.getElementById('pass2').value;
-
+  let token = email+pass1;
+  let cipherText = CryptoJS.AES.encrypt(token, "codingatthedisco").toString();
+  localStorage.setItem("sessionToken",cipherText);
   nombre = nombre.trim();
   if (!(/^[a-zA-Z\s]+$/.test(nombre))){
     alert.innerHTML = "Nombre invalido (a-z, A-Z)";
@@ -64,7 +79,6 @@ function register (){
     usuarioPhone: phone,
     usuarioPass1: pass1
   };
-  alert (JSON.stringify(usuario))
 }
 
 function clearData(){
