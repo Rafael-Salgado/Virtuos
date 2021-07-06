@@ -69,43 +69,22 @@ router.get("/login", function (req, res) {
 router.get("/home", function (req, res) {
   res.sendFile(path.join(__dirname + "/html/index.html"));
 });
-
-router.get("/home-page", function (req, res) {
-  res.redirect('/html/landing.html');
+router.get("/admin", function (req, res) {
+  res.sendFile(path.join(__dirname + "/html/admin.html"));
 });
-router.get("/products-page", function (req, res) {
-  res.redirect('/html/index.html');
+router.get("/store", function (req, res) {
+  res.sendFile(path.join(__dirname + "/html/shop.html"));
 });
-router.get("/contact-page", function (req, res) {
-  res.redirect('/html/contact.html');
+router.get("/product", function (req, res) {
+  res.sendFile(path.join(__dirname + "/html/single-product.html"));
 });
-router.get("/about-page", function (req, res) {
-  res.redirect('/html/about.html');
-});
-router.get("/login-page", function (req, res) {
-  res.redirect('/html/login.html');
-});
-router.get("/car-page", function (req, res) {
-  res.redirect('/html/carrito.html');
+router.get("/car", function (req, res) {
+  res.sendFile(path.join(__dirname + "/html/cart.html"));
 });
 
-
-router.post("/contact-page", function (req, res) {
-  res.redirect('/html/contact.html');
-});
-router.post("/login-page", function (req, res) {
-  res.redirect('/html/login.html');
-});
-router.post("/about-page", function (req, res) {
-  res.redirect('/html/about.html');
-});
-router.post("/home-page", function (req, res) {
-  res.redirect('/html/index.html');
-});
 router.post("/send-mail", function (req, res) {
-   let message = `Phone: ${req.body.phone}\n Name: ${req.body.name}\n  Email: ${req.body.email}\n${req.body.message}`
-  console.log(message);
-  console.log(process.env.EMAIL);
+   let message = `Phone: ${req.body.phone}\nName: ${req.body.name}\nEmail: ${req.body.email}\n${req.body.message}`
+   console.log(process.env.EMAIL);
   sendEmail({
     subject: req.body.subject,
     text: message,
