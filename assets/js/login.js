@@ -1,5 +1,3 @@
-import CryptoJS from "crypto-js";
-
 function verificarDatos(){
   //verificar que todos los datos estén correctos
   let isValid = false;
@@ -12,7 +10,9 @@ function verificarDatos(){
   let phone = document.getElementById('phone').value;
   let pass1 = document.getElementById('pass1').value;
   let pass2 = document.getElementById('pass2').value;
-
+  let token = email+pass1;
+  let cipherText = CryptoJS.AES.encrypt(token, "codingatthedisco").toString();
+  localStorage.setItem("sessionToken",cipherText);
   nombre = nombre.trim();
   if (!(/^[a-zA-Z\s]+$/.test(nombre))){
     alert.innerHTML = "Nombre invalido (a-z, A-Z)";
