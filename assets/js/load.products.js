@@ -2,7 +2,7 @@ function addItem(item) {
   const itemHTML = `<div class="col-lg-4 col-md-6 text-center ${item.category}">
             <div class="single-product-item">
               <div class="product-image">
-                <a href="single-product.html"
+                <a href="/product"
                   ><img
                     src="${item.img}"
                     alt=""
