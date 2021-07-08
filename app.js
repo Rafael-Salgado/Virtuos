@@ -91,15 +91,9 @@ router.get("/account", function (req, res) {
 });
 /* Conexión tabla de productos */
 router.get("/product-data", function(req,res){
-  
-  connection.connect((err) => {
-    if (err) throw err;
-  });
-  
   connection.query("SELECT * from products", (err, rows) => {
     if (err) throw err;
     res.json(rows);
-    connection.end();
   });
 });
 
@@ -117,15 +111,12 @@ router.post("/send-mail", function (req, res) {
 /* Insertar nuevo producto */
 router.post("/new-product", function (req, res) {
   console.log(req.body.productName);
-  connection.connect((err) => {
-    if (err) throw err;
-  });
-
+ 
   const insert = `INSERT INTO products (id,product_name,price,provee,product_description,song,category,product_image,stock) VALUES (null,'${req.body.productName}',${parseFloat(req.body.productPrice)},'${req.body.productSupplier}','${req.body.productDescription}','${req.body.productSong}','${req.body.productCategory}','${req.body.productImg}',${parseInt(req.body.productStock)})`;
   connection.query(insert, (err, rows) => {
     if(err) throw err
   })
-  connection.end();
+ 
   res.sendStatus(200);
 });
 
