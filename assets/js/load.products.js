@@ -147,7 +147,7 @@ addItem({
 
 if (localStorage.productList != null) {
   let list = JSON.parse(localStorage.productList);
-  list.forEach(product => {
+  list.forEach((product) => {
     addItem({
       name: product.name,
       img: product.img,
@@ -158,3 +158,25 @@ if (localStorage.productList != null) {
     });
   });
 }
+
+/* Tabla de productos */
+let url = "http://localhost:3000/product-data/";
+
+fetch(url)
+        .then(response => response.json())
+        .then(rows => {
+          console.log(rows);
+          rows.forEach(element => {
+            const product = {
+              name:element.product_name,
+              img: element.product_image,
+              category: element.category,
+              sound: element.song,
+              supplier: element.provee,
+              price: element.price,
+              description: element.product_description,
+            };
+            addItem(product)
+          });
+        })
+        .catch(err=>console.log(err))
