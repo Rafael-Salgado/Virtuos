@@ -46,7 +46,7 @@
     <!-- video -->
     <link rel="stylesheet" href="/assets/css/video.style.css" />
   </head>
-  <body>
+  <body onload="isLogged()">
 <!-- header -->
 	<div class="top-header-area" id="sticker">
 		<div class="container">
@@ -55,7 +55,7 @@
 					<div class="main-menu-wrap">
 						<!-- logo -->
 						<div class="site-logo">
-							<a href="/html/index.html" >
+							<a href="/home" >
 								<h2 style = "color: #ffb938; font-family: Bauhaus;">Virtuos</h2>
 							</a>
 						</div>
@@ -64,15 +64,15 @@
 						<!-- menu start -->
 						<nav class="main-menu">
 							<ul>
-								<li><a href="about.html">Nosotros</a></li>
-								<li><a href="contact.html">Contacto</a></li>
-								<li><a href="shop.html">Tienda</a>
-								</li>
-								<li><a href="login.html">Login</a>
+								<li><a href="/about">Nosotros</a></li>
+								<li><a href="/contact">Contacto</a></li>
+								<li><a href="/store">Tienda</a></li>
+                <li><a href="/login" id="sesion">Login</a>
+
 								</li>
 								<li>
 									<div class="header-icons">
-										<a class="shopping-cart" href="/html/cart.html"><i class="fas fa-shopping-cart"></i></a>
+										<a class="shopping-cart" href="/car"><i class="fas fa-shopping-cart"></i></a>
 										<a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
 									</div>
 								</li>
@@ -191,13 +191,13 @@
           <div class="col-lg-4 col-md-6 text-center">
             <div class="single-product-item">
               <div class="product-image">
-                <a href="single-product.html"
+                <a href="/product"
                   ><img src="/assets/img/products/clarinete.png" alt=""
                 /></a>
               </div>
               <h3>Clarinete</h3>
               <p class="product-price"><span>Yamaha</span> $10,750.00</p>
-              <a href="/html/cart.html" class="cart-btn"
+              <a href="/car" class="cart-btn"
                 ><i class="fas fa-shopping-cart"></i> Agregar</a
               >
             </div>
@@ -205,13 +205,13 @@
           <div class="col-lg-4 col-md-6 text-center">
             <div class="single-product-item">
               <div class="product-image">
-                <a href="/html/single-product.html"
+                <a href="/product"
                   ><img src="/assets/img/products/baritono.png" alt=""
                 /></a>
               </div>
               <h3>Barítono</h3>
               <p class="product-price"><span>Silvertone</span> $14,574.00</p>
-              <a href="/html/cart.html" class="cart-btn"
+              <a href="/car" class="cart-btn"
                 ><i class="fas fa-shopping-cart"></i> Agregar</a
               >
             </div>
@@ -219,13 +219,13 @@
           <div class="col-lg-4 col-md-6 offset-md-3 offset-lg-0 text-center">
             <div class="single-product-item">
               <div class="product-image">
-                <a href="/html/single-product.html"
+                <a href="/product"
                   ><img src="/assets/img/products/corno.png" alt=""
                 /></a>
               </div>
               <h3>Corno</h3>
               <p class="product-price"><span>Silvertone</span> $9,750.00</p>
-              <a href="/html/cart.html" class="cart-btn"
+              <a href="/car" class="cart-btn"
                 ><i class="fas fa-shopping-cart"></i> Agregar</a
               >
             </div>
@@ -280,7 +280,7 @@
                 </div>
               </div>
             </div>
-            <a href="/html/cart.html" class="cart-btn mt-3"
+            <a href="/car" class="cart-btn mt-3"
               ><i class="fas fa-shopping-cart"></i> Agregar</a
             >
           </div>
@@ -381,7 +381,7 @@
                 Sapiente facilis illo repellat veritatis minus, et labore minima
                 mollitia qui ducimus.
               </p>
-              <a href="/html/single-product.html" class="boxed-btn mt-4"
+              <a href="/product" class="boxed-btn mt-4"
                 >Saber más</a
               >
             </div>
@@ -561,5 +561,6 @@
     <script src="/assets/js/sticker.js"></script>
     <!-- main js -->
     <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/login.js"></script>
   </body>
 </html>
