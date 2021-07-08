@@ -2,10 +2,17 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const router = express.Router();
-
+const mysql = require("mysql");
 const port = 3000;
 
-require('dotenv').config();
+const connection = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "password",
+  database: "database_virtuos",
+});
+
+require("dotenv").config();
 const nodemailer = require("nodemailer");
 const { google } = require("googleapis");
 const OAuth2 = google.auth.OAuth2;
@@ -18,32 +25,30 @@ const createTransporter = async () => {
   );
 
   oauth2Client.setCredentials({
-    refresh_token: process.env.REFRESH_TOKEN
+    refresh_token: process.env.REFRESH_TOKEN,
   });
-try{
-  const accessToken = await oauth2Client.getAccessToken();
-  const transporter = nodemailer.createTransport({
-    service: "gmail",
-    tls: {
-      rejectUnauthorized: false
-    },
-    auth: {
-      type: "OAuth2",
-      user: process.env.EMAIL,
-      accessToken:accessToken,
-      clientId: process.env.CLIENT_ID,
-      clientSecret: process.env.CLIENT_SECRET,
-      refreshToken: process.env.REFRESH_TOKEN
-    },
-   
-  });
+  try {
+    const accessToken = await oauth2Client.getAccessToken();
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      tls: {
+        rejectUnauthorized: false,
+      },
+      auth: {
+        type: "OAuth2",
+        user: process.env.EMAIL,
+        accessToken: accessToken,
+        clientId: process.env.CLIENT_ID,
+        clientSecret: process.env.CLIENT_SECRET,
+        refreshToken: process.env.REFRESH_TOKEN,
+      },
+    });
 
-  return transporter;
-}catch(error){
-  console.log(error)
-  return error;
-}
- 
+    return transporter;
+  } catch (error) {
+    console.log(error);
+    return error;
+  }
 };
 
 const sendEmail = async (emailOptions) => {
@@ -51,11 +56,11 @@ const sendEmail = async (emailOptions) => {
   await emailTransporter.sendMail(emailOptions);
 };
 
-
 //Middle Word
 app.use(express.static(__dirname + "/"));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+
 
 router.get("/about", function (req, res) {
   res.sendFile(path.join(__dirname + "/html/about.html"));
@@ -69,51 +74,59 @@ router.get("/login", function (req, res) {
 router.get("/home", function (req, res) {
   res.sendFile(path.join(__dirname + "/html/index.html"));
 });
+router.get("/admin", function (req, res) {
+  res.sendFile(path.join(__dirname + "/html/admin.html"));
+});
+router.get("/store", function (req, res) {
+ res.sendFile(path.join(__dirname + "/html/shop.html"));
+});
+router.get("/product", function (req, res) {
+  res.sendFile(path.join(__dirname + "/html/single-product.html"));
+});
+router.get("/car", function (req, res) {
+  res.sendFile(path.join(__dirname + "/html/cart.html"));
+});
+router.get("/account", function (req, res) {
+  res.sendFile(path.join(__dirname + "/html/micuenta.html"));
+});
+/* Conexión tabla de productos */
+router.get("/product-data", function(req,res){
+  
+  connection.connect((err) => {
+    if (err) throw err;
+  });
+  
+  connection.query("SELECT * from products", (err, rows) => {
+    if (err) throw err;
+    res.json(rows);
+    connection.end();
+  });
+});
 
-router.get("/home-page", function (req, res) {
-  res.redirect('/html/landing.html');
-});
-router.get("/products-page", function (req, res) {
-  res.redirect('/html/index.html');
-});
-router.get("/contact-page", function (req, res) {
-  res.redirect('/html/contact.html');
-});
-router.get("/about-page", function (req, res) {
-  res.redirect('/html/about.html');
-});
-router.get("/login-page", function (req, res) {
-  res.redirect('/html/login.html');
-});
-router.get("/car-page", function (req, res) {
-  res.redirect('/html/carrito.html');
-});
-
-
-router.post("/contact-page", function (req, res) {
-  res.redirect('/html/contact.html');
-});
-router.post("/login-page", function (req, res) {
-  res.redirect('/html/login.html');
-});
-router.post("/about-page", function (req, res) {
-  res.redirect('/html/about.html');
-});
-router.post("/home-page", function (req, res) {
-  res.redirect('/html/index.html');
-});
 router.post("/send-mail", function (req, res) {
-   let message = `Phone: ${req.body.phone}\n Name: ${req.body.name}\n  Email: ${req.body.email}\n${req.body.message}`
-  console.log(message);
+  let message = `Phone: ${req.body.phone}\nName: ${req.body.name}\nEmail: ${req.body.email}\n${req.body.message}`;
   console.log(process.env.EMAIL);
   sendEmail({
     subject: req.body.subject,
     text: message,
     to: "rafael.e.salgado109@gmail.com",
-    from: process.env.EMAIL
+    from: process.env.EMAIL,
+  });
+  res.redirect("/html/index.html");
+});
+/* Insertar nuevo producto */
+router.post("/new-product", function (req, res) {
+  console.log(req.body.productName);
+  connection.connect((err) => {
+    if (err) throw err;
   });
 
-  res.redirect('/html/index.html');
+  const insert = `INSERT INTO products (id,product_name,price,provee,product_description,song,category,product_image,stock) VALUES (null,'${req.body.productName}',${parseFloat(req.body.productPrice)},'${req.body.productSupplier}','${req.body.productDescription}','${req.body.productSong}','${req.body.productCategory}','${req.body.productImg}',${parseInt(req.body.productStock)})`;
+  connection.query(insert, (err, rows) => {
+    if(err) throw err
+  })
+  connection.end();
+  res.sendStatus(200);
 });
 
 app.use("/", router);
