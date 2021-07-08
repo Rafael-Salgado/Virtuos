@@ -72,15 +72,14 @@
               <!-- logo -->
               <div class="site-logo">
                 <a href="/home">
-                  <h2 style = "color: #ffb938; font-family: Bauhaus;">Virtuos</h2>
+                  <h2 style="color: #ffb938; font-family: Bauhaus">Virtuos</h2>
                 </a>
               </div>
               <!-- logo -->
-  
+
               <!-- menu start -->
               <nav class="main-menu">
                 <ul>
-
                   <li><a href="/about">Nosotros</a></li>
                   <li><a href="/contact">Contacto</a></li>
                   <li><a href="/store">Tienda</a></li>
@@ -88,13 +87,19 @@
 
                   <li>
                     <div class="header-icons">
-                      <a class="shopping-cart" href="/car"><i class="fas fa-shopping-cart"></i></a>
-                      <a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+                      <a class="shopping-cart" href="/car"
+                        ><i class="fas fa-shopping-cart"></i
+                      ></a>
+                      <a class="mobile-hide search-bar-icon" href="#"
+                        ><i class="fas fa-search"></i
+                      ></a>
                     </div>
                   </li>
                 </ul>
               </nav>
-              <a class="mobile-show search-bar-icon" href="#"><i class="fas fa-search"></i></a>
+              <a class="mobile-show search-bar-icon" href="#"
+                ><i class="fas fa-search"></i
+              ></a>
               <div class="mobile-menu"></div>
               <!-- menu end -->
             </div>
@@ -103,7 +108,7 @@
       </div>
     </div>
     <!-- end header -->
-  
+
     <!-- search area -->
     <div class="search-area">
       <div class="container">
@@ -113,15 +118,17 @@
             <div class="search-bar">
               <div class="search-bar-tablecell">
                 <h3>Búsqueda:</h3>
-                <input type="text" placeholder="Palabras clave">
-                <button type="submit">Buscar <i class="fas fa-search"></i></button>
+                <input type="text" placeholder="Palabras clave" />
+                <button type="submit">
+                  Buscar <i class="fas fa-search"></i>
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    
+
     <div class="breadcrumb-section breadcrumb-bg-sp">
       <div class="container">
         <div class="row">
@@ -134,7 +141,7 @@
       </div>
     </div>
 
-    <form id="productForm" onsubmit="submitProduct()">
+    <form action="/new-product" id="productForm" method="POST">
       <select
         name="productCategory"
         class="custom-select"
@@ -186,7 +193,25 @@
         id="exampleFormControlInput4"
         placeholder="Precio"
         required
+      /> <br>
+      <input
+        type="text"
+        name="productSong"
+        class="form-control"
+        id="exampleFormControlInput4"
+        placeholder="Demo Acústico"
+        required
       />
+      <br />
+      <input
+        type="text"
+        name="productStock"
+        class="form-control"
+        id="exampleFormControlInput4"
+        placeholder="Stock"
+        required
+      />
+      <br />
       <button type="submit" value="Submit" class="btn btn-de-froma">
         Guardar
       </button>
@@ -204,15 +229,23 @@
               </p>
             </div>
           </div>
-          
+
           <div class="col-lg-3 col-md-6">
             <div class="footer-box subscribe">
               <h2 class="widget-title">Encuéntranos</h2>
               <ul class="product-share">
-                <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href=""><i class="fab fa-twitter"></i></a></li>
-                <li><a href=""><i class="fab fa-google-plus-g"></i></a></li>
-                <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                <li>
+                  <a href=""><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li>
+                  <a href=""><i class="fab fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href=""><i class="fab fa-google-plus-g"></i></a>
+                </li>
+                <li>
+                  <a href=""><i class="fab fa-linkedin"></i></a>
+                </li>
               </ul>
             </div>
           </div>
@@ -240,8 +273,9 @@
     <script src="/assets/js/sticker.js"></script>
     <!-- main js -->
     <script src="/assets/js/main.js"></script>
-
+    
     <script>
+      
       function submitProduct() {
         let form = document.getElementById("productForm");
         let productName = form.elements["productName"].value;
@@ -250,29 +284,28 @@
         let productCategory = form.elements["productCategory"].value;
         let productPrice = form.elements["productPrice"].value;
         let productDescription = form.elements["productDescription"].value;
-       
-        const product={
-            name: productName, 
-            img: productImg, 
-            category: productCategory,
-            supplier: productSupplier,
-            price: productPrice,
-            description: productDescription
-        };
-        if(localStorage.productList == null){
-            let list = [];
-            list.push(product);
-            alert(JSON.stringify(list))
-            localStorage.setItem("productList", JSON.stringify(list));
+      
 
-        }else{
-            let list = JSON.parse(localStorage.productList);
-            list.push(product);
-            localStorage.productList = JSON.stringify(list);
-        }
-            
+        /* const product = {
+          name: productName,
+          img: productImg,
+          category: productCategory,
+          supplier: productSupplier,
+          price: productPrice,
+          description: productDescription,
+        };
+        if (localStorage.productList == null) {
+          let list = [];
+          list.push(product);
+          alert(JSON.stringify(list));
+          localStorage.setItem("productList", JSON.stringify(list));
+        } else {
+          let list = JSON.parse(localStorage.productList);
+          list.push(product);
+          localStorage.productList = JSON.stringify(list);
+        } */
       }
     </script>
-        <script src="/assets/js/login.js"></script>
+    <script src="/assets/js/login.js"></script>
   </body>
 </html>
