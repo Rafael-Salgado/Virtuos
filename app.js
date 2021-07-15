@@ -117,16 +117,15 @@ router.post("/new-product", function (req, res) {
     if(err) throw err
   })
  
+
+ 
   res.sendStatus(200);
 });
 
-app.use("/", router);
-app.listen(port, () => {
-  console.log("Servidor en el puerto", port);
-});
 
 
-/* Conexión tabla de usuario */
+
+/* Conexión a tabla de usuario */
 router.get("/user-data", function(req,res){
   connection.query("SELECT * from users", (err, rows) => {
     if (err) throw err;
@@ -138,13 +137,15 @@ router.get("/user-data", function(req,res){
 
 /* Insertar nuevo usuario */
 router.post("/new-user", function (req, res) {
-  console.log(req.body.productName);
+  console.log(req.body.name);
  
-  const insert = `INSERT INTO users (id,user_name,user_lastname,email,user_phone,user_password) VALUES (null,'${req.body.name}',${req.body.last_name},'${req.body.email}','${req.body.phone}','${req.body.pass}','${req.body.pass2}')`;
+  const insert = `INSERT INTO users (id,user_name,user_lastname,email,user_phone,user_password) VALUES (null,'${req.body.name}',${req.body.last_name},'${req.body.email}','${req.body.phone}','${req.body.pass}')`;
   connection.query(insert, (err, rows) => {
     if(err) throw err
   })
  
+
+
   res.sendStatus(200);
 });
 
