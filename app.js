@@ -139,14 +139,11 @@ router.get("/user-data", function(req,res){
 router.post("/new-user", function (req, res) {
   console.log(req.body.name);
  
-  const insert = `INSERT INTO users (id,user_name,user_lastname,email,user_phone,user_password) VALUES (null,'${req.body.name}',${req.body.last_name},'${req.body.email}','${req.body.phone}','${req.body.pass}')`;
+  const insert = `INSERT INTO users (id,user_name,user_lastname,user_email,user_phone,user_password) VALUES (null,'${req.body.name}','${req.body.last_name}','${req.body.email}','${req.body.phone}','${req.body.pass}')`;
   connection.query(insert, (err, rows) => {
     if(err) throw err
   })
- 
-
-
-  res.sendStatus(200);
+   res.sendStatus(200);
 });
 
 app.use("/", router);
