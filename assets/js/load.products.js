@@ -15,7 +15,7 @@ function addItem(item) {
               <p class="product-price">
                 <span>${item.supplier}</span>$${item.price}
               </p>
-              <a href="cart.html" class="cart-btn"
+              <a href="/car" class="cart-btn"
                 ><i class="fas fa-shopping-cart"></i> Agregar</a
               >
             </div>
