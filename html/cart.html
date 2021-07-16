@@ -1,18 +1,23 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-	<!-- title -->
-	<title>Virtuos</title>
+    <!-- title -->
+    <title>Virtuos</title>
 
-	<!-- google font -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
-	<link
+    <!-- google font -->  
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Prata|Roboto:light|Work Sans:regular"
     />
@@ -22,243 +27,345 @@
       href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap"
       rel="stylesheet"
     />
-	<!-- fontawesome -->
-	<link rel="stylesheet" href="/assets/css/all.min.css">
-	<!-- bootstrap -->
-	<link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
-	<!-- owl carousel -->
-	<link rel="stylesheet" href="/assets/css/owl.carousel.css">
-	<!-- magnific popup -->
-	<link rel="stylesheet" href="/assets/css/magnific-popup.css">
-	<!-- animate css -->
-	<link rel="stylesheet" href="/assets/css/animate.css">
-	<!-- mean menu css -->
-	<link rel="stylesheet" href="/assets/css/meanmenu.min.css">
-	<!-- main style -->
-	<link rel="stylesheet" href="/assets/css/main.css">
-	<!-- responsive -->
-	<link rel="stylesheet" href="/assets/css/responsive.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="/assets/css/all.min.css" />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" />
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="/assets/css/owl.carousel.css" />
+    <!-- magnific popup -->
+    <link rel="stylesheet" href="/assets/css/magnific-popup.css" />
+    <!-- animate css -->
+    <link rel="stylesheet" href="/assets/css/animate.css" />
+    <!-- mean menu css -->
+    <link rel="stylesheet" href="/assets/css/meanmenu.min.css" />
+    <!-- main style -->
+    <link rel="stylesheet" href="/assets/css/cart.css" />
+    <link rel="stylesheet" href="/js/cart.js" />
+    <!-- responsive -->
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <div class="top-header-area" id="sticker">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-sm-12 text-center">
+            <div class="main-menu-wrap">
+              <!-- logo -->
+              <div class="site-logo">
+                <a href="index.html">
+                  <h2 style="color: #ffb938; font-family: Bauhaus">Virtuos</h2>
+                </a>
+              </div>
+              <!-- logo -->
 
-</head>
-<body onload="isLogged()">
-
-	<!-- header -->
-	<div class="top-header-area" id="sticker">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12 col-sm-12 text-center">
-					<div class="main-menu-wrap">
-						<!-- logo -->
-						<div class="site-logo">
-							<a href="/home">
-								<h2 style = "color: #ffb938; font-family: Bauhaus;">Virtuos</h2>
-							</a>
-						</div>
-						<!-- logo -->
-
-						<!-- menu start -->
-						<nav class="main-menu">
-							<ul>
-
+              <!-- menu start -->
+              <nav class="main-menu">
+                <ul>
 								<li><a href="/about">Nosotros</a></li>
 								<li><a href="/contact">Contacto</a></li>
 								<li><a href="/store">Tienda</a></li>
 								<li><a href="/login" id="sesion">Login</a></li>
+                  <li>
+                    <div class="header-icons">
+                      <a class="shopping-cart" href="cart.html"
+                        ><i class="fas fa-shopping-cart"></i
+                      ></a>
+                      <a class="mobile-hide search-bar-icon" href="#"
+                        ><i class="fas fa-search"></i
+                      ></a>
+                    </div>
+                  </li>
+                </ul>
+              </nav>
+              <a class="mobile-show search-bar-icon" href="#"
+                ><i class="fas fa-search"></i
+              ></a>
+              <div class="mobile-menu"></div>
+              <!-- menu end -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end header -->
 
-								<li>
-									<div class="header-icons">
-										<a class="shopping-cart" href="/car"><i class="fas fa-shopping-cart"></i></a>
-										<a class="mobile-hide search-bar-icon" href="#"><i class="fas fa-search"></i></a>
-									</div>
-								</li>
-							</ul>
-						</nav>
-						<a class="mobile-show search-bar-icon" href="#"><i class="fas fa-search"></i></a>
-						<div class="mobile-menu"></div>
-						<!-- menu end -->
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- end header -->
+    <!-- search area -->
+    <div class="search-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <span class="close-btn"><i class="fas fa-window-close"></i></span>
+            <div class="search-bar">
+              <div class="search-bar-tablecell">
+                <h3>Búsqueda:</h3>
+                <input type="text" placeholder="Palabras clave" />
+                <button type="submit">
+                  Buscar <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end search arewa -->
 
-	<!-- search area -->
-	<div class="search-area">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<span class="close-btn"><i class="fas fa-window-close"></i></span>
-					<div class="search-bar">
-						<div class="search-bar-tablecell">
-							<h3>Búsqueda:</h3>
-							<input type="text" placeholder="Palabras clave">
-							<button type="submit">Buscar <i class="fas fa-search"></i></button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- end search arewa -->
-	
-	<!-- breadcrumb-section -->
-	<div class="breadcrumb-section breadcrumb-bg-cart">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-8 offset-lg-2 text-center">
-					<div class="breadcrumb-text">
-						<p>Intensidad y Armonía</p>
-						<h1>Compras</h1>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- end breadcrumb section -->
+    <!-- breadcrumb-section -->
+    <div class="breadcrumb-section breadcrumb-bg-cart">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 offset-lg-2 text-center">
+            <div class="breadcrumb-text">
+              <p>Intensidad y Armonía</p>
+              <h1>Compras</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end breadcrumb section -->
 
-	<!-- cart -->
-	<div class="cart-section mt-80 mb-150">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-8 col-md-12">
-					<div class="cart-table-wrap">
-						<table class="cart-table">
-							<thead class="cart-table-head">
-								<tr class="table-head-row">
-									<th class="product-remove"></th>
-									<th class="product-image">Producto</th>
-									<th class="product-name">Nombre</th>
-									<th class="product-price">Precio</th>
-									<th class="product-quantity">Cantidad</th>
-									<th class="product-total">Total</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr class="table-body-row">
-									<td class="product-remove"><a href="#"><i class="far fa-window-close"></i></a></td>
-									<td class="product-image"><img src="https://cdn.shopify.com/s/files/1/0253/8618/8834/products/17e997227059_480x480@2x.jpg?v=1595029657" alt="a"></td>
-									<td class="product-name">Guitarra Clásica</td>
-									<td class="product-price">$1,200</td>
-									<td class="product-quantity"><input type="number" placeholder="0"></td>
-									<td class="product-total">1</td>
-								</tr>
-								<tr class="table-body-row">
-									<td class="product-remove"><a href="#"><i class="far fa-window-close"></i></a></td>
-									<td class="product-image"><img src="https://t4.ftcdn.net/jpg/00/17/56/27/360_F_17562784_aAbERlYCAvYPL1q7ZgP50RUtAev12TVS.jpg" alt="b"></td>
-									<td class="product-name">Chelo</td>
-									<td class="product-price">$37,500</td>
-									<td class="product-quantity"><input type="number" placeholder="0"></td>
-									<td class="product-total">1</td>
-								</tr>
-								<tr class="table-body-row">
-									<td class="product-remove"><a href="#"><i class="far fa-window-close"></i></a></td>
-									<td class="product-image"><img src="https://ss631.liverpool.com.mx/xl/55193142.jpg" alt="c"></td>
-									<td class="product-name">Piano
-									</td>
-									<td class="product-price">$54,000</td>
-									<td class="product-quantity"><input type="number" placeholder="0"></td>
-									<td class="product-total">1</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
+    <!-- table cart------------------------------------------------------------------------------------------------ -->
+    <div class="cart-section mt-80 mb-150">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-12">
+            <div class="cart-table-wrap">
+              <table class="cart-table">
+                <thead class="cart-table-head">
+                  <tr class="table-head-row">
+                    <th class="product-remove"></th>
+                    <th class="product-image">Producto</th>
+                    <th class="product-name">Nombre</th>
+                    <th class="product-price">Precio</th>
+                    <th class="product-quantity">Cantidad</th>
+                    <th class="product-total">Total</th>
+                  </tr>
+                </thead>
+                <tbody id="products">
+                </tbody>
+              </table>
+            </div>
+          </div>
+<!---------------------------------------------------------------total table-------------------------->
+          <div class="col-lg-4">
+            <div class="total-section">
+              <table class="total-table">
+                <thead class="total-table-head">
+                  <tr class="table-total-row">
+                    <th>Total</th>
+                    <th>Precio</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="total-data">
+                    <td><strong>Subtotal: </strong></td>
+                    <td id="subtotal">$92,700</td>
+                  </tr>
+                  <tr class="total-data">
+                    <td><strong>Envío: </strong></td>
+                    <td>$3,000</td>
+                  </tr>
+                  <tr class="total-data">
+                    <td><strong>Total: </strong></td>
+                    <td id="total">$95700</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="cart-buttons">
+                <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+								Launch demo modal
+							</button> -->
+                <button
+                  class="btn btn-warning btn-lg"
+									id="proceder"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#collapseExample"
+                  aria-expanded="false"
+                  aria-controls="collapseExample"
+                >Proceder al pago
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- payment method --------------------------------------------------------------------------------------------------------->
+    <div class="collapse centered" id="collapseExample">
+      <div class="modal__container">
+        <div class="modal__featured">
+          <button
+            type="button"
+            class="button--transparent button--close"
+            data-toggle="collapse"
+            data-target="#collapseExample"
+            aria-expanded="false"
+            aria-controls="collapseExample"
+            data-dismiss="modal"
+          >
+            <svg
+              class="nc-icon glyph"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              width="32px"
+              height="32px"
+              viewBox="0 0 32 32"
+            >
+              <g>
+                <path
+                  fill="#ffffff"
+                  d="M1.293,15.293L11,5.586L12.414,7l-8,8H31v2H4.414l8,8L11,26.414l-9.707-9.707 C0.902,16.316,0.902,15.684,1.293,15.293z"
+                ></path>
+              </g>
+            </svg>
+            <span class="visuallyhidden">Return to Product Page</span>
+          </button>
+          <div class="modal__circle"></div>
+          <img src="" />
+        </div>
+        <div class="modal__content">
+          <h4>Detalles de pago</h4>
+          <br />
+          <form>
+            <ul class="form-list">
+              <li class="form-list__row">
+                <label>Nombre</label>
+                <input type="text" maxlength="20" name="" required="" />
+              </li>
+              <li class="form-list__row">
+                <label>Número de Tarjeta</label>
+                <div id="input--cc" class="creditcard-icon">
+                  <input
+                    type="text"
+                    maxlength="16"
+                    name="cc_number"
+                    required=""
+                  />
+                </div>
+              </li>
+              <li class="form-list__row form-list__row--inline">
+                <div>
+                  <label>Vigencia</label>
+                  <div class="form-list__input-inline">
+                    <input
+                      type="text"
+                      name="cc_month"
+                      placeholder="MM"
+                      pattern="\\d*"
+                      minlength="2"
+                      maxlength="2"
+                      required=""
+                    />
+                    <input
+                      type="text"
+                      name="cc_year"
+                      placeholder="YY"
+                      pattern="\\d*"
+                      minlength="2"
+                      maxlength="2"
+                      required=""
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label>CCV</label>
+                  <input
+                    type="text"
+                    name="cc_cvc"
+                    placeholder="123"
+                    pattern="\\d*"
+                    minlength="3"
+                    maxlength="4"
+                    required=""
+                  />
+                </div>
+              </li>
+              <li class="form-list__row form-list__row--agree">
+                <label>
+                  <input type="checkbox" name="save_cc" checked="checked" />
+                  Guardar mi información para compras futuras
+                </label>
+              </li>
+              <li>
+                <a href=""
+                  ><button
+                    type="button"
+                    onclick="clearcart()"
+                    class="button-finale"
+                  >
+                    Pagar
+                  </button></a
+                >
+              </li>
+            </ul>
+          </form>
+        </div>
+      </div>
+    </div>
 
-				<div class="col-lg-4">
-					<div class="total-section">
-						<table class="total-table">
-							<thead class="total-table-head">
-								<tr class="table-total-row">
-									<th>Total</th>
-									<th>Precio</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr class="total-data">
-									<td><strong>Subtotal: </strong></td>
-									<td>$92,700</td>
-								</tr>
-								<tr class="total-data">
-									<td><strong>Envío: </strong></td>
-									<td>$3,000</td>
-								</tr>
-								<tr class="total-data">
-									<td><strong>Total: </strong></td>
-									<td>$95700</td>
-								</tr>
-							</tbody>
-						</table>
-						<div class="cart-buttons">
-							<a href="cart.html" class="boxed-btn">Limpiar carrito</a>
-							<a href="checkout.html" class="boxed-btn black">Pagar carrito</a>
-							
-						</div>
-					</div>
+    <!-- footer ------------------------------------------------------------------------------------------------------->
+    <div class="footer-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9 col-md-6">
+            <div class="footer-box about-widget">
+              <h2 class="widget-title">Virtuos</h2>
+              <p>
+                Creemos en la música como estilo de vida, con más de 30 años
+                vendiendo los mejores productos en la rama musical.
+              </p>
+            </div>
+          </div>
 
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-box subscribe">
+              <h2 class="widget-title">Encuéntranos</h2>
+              <ul class="product-share">
+                <li>
+                  <a href=""><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li>
+                  <a href=""><i class="fab fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href=""><i class="fab fa-google-plus-g"></i></a>
+                </li>
+                <li>
+                  <a href=""><i class="fab fa-linkedin"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end footer --------------------------------------------------------------------------------->
 
-							</div>
-					
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- end cart -->
-
-	<!-- footer -->
-	<div class="footer-area">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-9 col-md-6">
-					<div class="footer-box about-widget">
-						<h2 class="widget-title">Virtuos</h2>
-						<p>
-							Creemos en la música como estilo de vida, con más de 30 años
-							vendiendo los mejores productos en la rama musical.
-						</p>
-					</div>
-				</div>
-				
-				<div class="col-lg-3 col-md-6">
-					<div class="footer-box subscribe">
-						<h2 class="widget-title">Encuéntranos</h2>
-						<ul class="product-share">
-							<li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-							<li><a href=""><i class="fab fa-twitter"></i></a></li>
-							<li><a href=""><i class="fab fa-google-plus-g"></i></a></li>
-							<li><a href=""><i class="fab fa-linkedin"></i></a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- end footer -->
-	
-	
-	<!-- jquery -->
-	<script src="/assets/js/jquery-1.11.3.min.js"></script>
-	<!-- bootstrap -->
-	<script src="/assets/bootstrap/js/bootstrap.min.js"></script>
-	<!-- count down -->
-	<script src="/assets/js/jquery.countdown.js"></script>
-	<!-- isotope -->
-	<script src="/assets/js/jquery.isotope-3.0.6.min.js"></script>
-	<!-- waypoints -->
-	<script src="/assets/js/waypoints.js"></script>
-	<!-- owl carousel -->
-	<script src="/assets/js/owl.carousel.min.js"></script>
-	<!-- magnific popup -->
-	<script src="/assets/js/jquery.magnific-popup.min.js"></script>
-	<!-- mean menu -->
-	<script src="/assets/js/jquery.meanmenu.min.js"></script>
-	<!-- sticker js -->
-	<script src="/assets/js/sticker.js"></script>
-	<!-- main js -->
-	<script src="/assets/js/main.js"></script>
-	<script src="/assets/js/login.js"></script>
-
-</body>
+    <!-- jquery -->
+    <script src="/assets/js/jquery-1.11.3.min.js"></script>
+    <!-- bootstrap -->
+    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+    <!-- count down -->
+    <script src="/assets/js/jquery.countdown.js"></script>
+    <!-- isotope -->
+    <script src="/assets/js/jquery.isotope-3.0.6.min.js"></script>
+    <!-- waypoints -->
+    <script src="/assets/js/waypoints.js"></script>
+    <!-- owl carousel -->
+    <script src="/assets/js/owl.carousel.min.js"></script>
+    <!-- magnific popup -->
+    <script src="/assets/js/jquery.magnific-popup.min.js"></script>
+    <!-- mean menu -->
+    <script src="/assets/js/jquery.meanmenu.min.js"></script>
+    <!-- sticker js -->
+    <script src="/assets/js/sticker.js"></script>
+    <!-- main js -->
+    <script src="/assets/js/cart.js"></script>
+  </body>
 </html>

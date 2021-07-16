@@ -15,7 +15,8 @@ function addItem(item) {
               <p class="product-price">
                 <span>${item.supplier}</span>$${item.price}
               </p>
-              <a href="/car" class="cart-btn"
+               <a href="/car" onclick="addcart${item.name.toLowerCase()
+              }()" class="cart-btn"
                 ><i class="fas fa-shopping-cart"></i> Agregar</a
               >
             </div>
@@ -23,6 +24,7 @@ function addItem(item) {
   const itemsContainer = document.getElementById("list-items");
   itemsContainer.innerHTML += itemHTML;
 }
+// Listas de objetos a importarse automáticamente guardando la estructura que está en la función. Pidieron 10 pero son 12 //
 // Listas de objetos a importarse automáticamente guardando la estructura que está en la función. Pidieron 10 pero son 12 //
 addItem({
   name: "Piano",
@@ -39,7 +41,7 @@ addItem({
   name: "Trompeta",
   img: "http://images.musicstore.de/images/1280/yamaha-ytr-2330-trompeta-si-bemol_1_BLA0003132-000.jpg",
   category: "viento",
-  sound: "/assets/sounds/STD.ogg",
+  sound: "/assets/sounds/guitarra2.ogg",
   supplier: "Silvertone",
   price: "5,000.00",
   description:
@@ -50,7 +52,7 @@ addItem({
   name: "Clarinete",
   img: "https://www.atelierdecelia.com/productos/imagenes/img_3791_1715cce435bb965ed28aa255e7382d3d_20.jpg",
   category: "viento",
-  sound: "/assets/sounds/SCD.ogg",
+  sound: "/assets/sounds/guitarra2.ogg",
   supplier: "Yamaha",
   price: "7,000.00",
   description:
@@ -61,7 +63,7 @@ addItem({
   name: "Saxofón alto",
   img: "https://karmamusic.mx/5440-large_default/sax-alto-laqueado-cyrus-winds------c.jpg",
   category: "viento",
-  sound: "/assets/sounds/SSAD.ogg",
+  sound: "/assets/sounds/guitarra2.ogg",
   supplier: "Silvertone",
   price: "14,000.00",
   description:
@@ -72,7 +74,7 @@ addItem({
   name: "Saxofón Sopranino",
   img: "https://ae01.alicdn.com/kf/HTB1EtOSaGSs3KVjSZPiq6AsiVXab.jpg_q50.jpg",
   category: "viento",
-  sound: "/assets/sounds/SSSD.ogg",
+  sound: "/assets/sounds/guitarra2.ogg",
   supplier: "Silvertone",
   price: "16,000.00",
   description:
@@ -105,7 +107,7 @@ addItem({
   name: "Guitarra Clásica",
   img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRuXUxuKy6eLtS_jUC_fuJ2dtePy-Ffoe7Tw&usqp=CAU",
   category: "cuerdas",
-  sound: "/assets/sounds/SGAD.ogg",
+  sound: "/assets/sounds/guitarra2.ogg",
   supplier: "Yamaha",
   price: "2,000.00",
   description:
@@ -138,7 +140,7 @@ addItem({
   name: "Contrabajo",
   img: "https://www.mrcdinstrumentos.com.mx/shared/productos/105/AMCB001.jpg",
   category: "cuerdas",
-  sound: "/assets/sounds/SCBD.ogg",
+  sound: "/assets/sounds/guitarra2.ogg",
   supplier: "Silvertone",
   price: "11,000.00",
   description:
@@ -147,7 +149,7 @@ addItem({
 
 if (localStorage.productList != null) {
   let list = JSON.parse(localStorage.productList);
-  list.forEach((product) => {
+  list.forEach(product => {
     addItem({
       name: product.name,
       img: product.img,
@@ -159,7 +161,81 @@ if (localStorage.productList != null) {
   });
 }
 
-/* Tabla de productos */
+function verifycart(){
+
+  if(!localStorage.getItem("cart"))
+
+{localStorage.setItem("cart", JSON.stringify({}))}
+}
+
+function addcartpiano(){
+verifycart();
+let piano = {
+  name: "Piano",
+  img: "https://d1aeri3ty3izns.cloudfront.net/media/67/671442/600/preview.jpg",
+  category: "cuerdas",
+  supplier: "Yamaha",
+  price: 34000.00,
+  description:
+    "Piano de cola con pedal. Para el armazón sobre el que se asientan las cuerdas se usa madera de roble, abeto, haya o nogal.",
+}
+
+var traerProduct = JSON.parse(localStorage.getItem('cart'));
+var keysProduct = Object.keys(traerProduct);
+
+traerProduct[keysProduct.length]=piano;
+
+var productToJson = JSON.stringify(traerProduct);
+localStorage.setItem('cart',productToJson);
+
+}
+
+function addcarttrompeta(){
+  verifycart();
+  let trompeta = {
+    name: "Trompeta",
+    img: "http://images.musicstore.de/images/1280/yamaha-ytr-2330-trompeta-si-bemol_1_BLA0003132-000.jpg",
+    category: "viento",
+    supplier: "Silvertone",
+    price: 25000.00,
+    description:
+      "Boquilla de trompeta (3 C 5C 7C) para instrumentos de embouchure hecho de latón chapado en oro, compatible con instrumentos musicales Yamaha Bach.",
+  }
+  
+  var traerProduct = JSON.parse(localStorage.getItem('cart'));
+  var keysProduct = Object.keys(traerProduct);
+  
+  traerProduct[keysProduct.length]=trompeta;
+  
+  var productToJson = JSON.stringify(traerProduct);
+  localStorage.setItem('cart',productToJson);
+  
+  }
+  
+
+  function addcartclarinete(){
+    verifycart();
+    let clarinete = {
+      name: "Clarinete",
+      img: "https://www.atelierdecelia.com/productos/imagenes/img_3791_1715cce435bb965ed28aa255e7382d3d_20.jpg",
+      category: "viento",
+      supplier: "Yamaha",
+      price: 17000.00,
+      description:
+        "Embocadura de caña sujeta a la boquilla mediante una abrazadera.",
+    }
+    
+    var traerProduct = JSON.parse(localStorage.getItem('cart'));
+    var keysProduct = Object.keys(traerProduct);
+    
+    traerProduct[keysProduct.length]=clarinete;
+    
+    var productToJson = JSON.stringify(traerProduct);
+    localStorage.setItem('cart',productToJson);
+    
+    }
+
+    /* Tabla de productos */
 let url = "http://localhost:3000/product-data/";
 
 fetch(url)

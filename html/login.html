@@ -193,6 +193,8 @@
           <div>
 			  <!-- Form user sign up -->
             <form
+             action = "/new-user"
+             method="POST"
               id="miformulario"
               onsubmit="return false"
               enctype="text/plain"
@@ -203,6 +205,7 @@
               <input
                 type="text"
                 id="nombre"
+                name="name"
                 class="form-control input-lili"
                 placeholder="Nombres"
                 aria-label="First name"
@@ -212,6 +215,7 @@
 			 <!--  User last name -->
               <input
                 type="text"
+                name="last_name"
                 id="apellidos"
                 class="form-control input-lili"
                 placeholder="Apellidos"
@@ -223,6 +227,7 @@
                 type="email"
                 class="form-control input-lili"
                 id="email"
+                name="email"
                 placeholder="nombre@ejemplo.com"
                 required
                 title="Tiene que ser un correo válido"
@@ -232,6 +237,7 @@
                 type="text"
                 class="form-control input-lili"
                 id="phone"
+                name="phone"
                 placeholder="5555-5555"
                 required
               />
@@ -240,6 +246,7 @@
                 type="password"
                 class="form-control input-lili"
                 id="pass1"
+                name="pass"
                 placeholder="Contraseña"
                 required
               />
@@ -248,6 +255,7 @@
                 type="password"
                 class="form-control input-lili"
                 id="pass2"
+                name="pass2"
                 placeholder="Validar contraseña"
                 required
               />
