@@ -126,11 +126,22 @@ router.post("/new-product", function (req, res) {
 
 
 /* Conexión a tabla de usuario */
-router.get("/user-data", function(req,res){
-  connection.query("SELECT * from users", (err, rows) => {
+router.post("/user-data", function(req,res){
+ connection.query(`SELECT * from users where user_email='${req.body.email}'`, (err, rows) => {
+   
+
     if (err) throw err;
-    res.json(rows);
+    console.log(JSON.parse(rows));
+   /* rows.array.forEach(element => {
+      if(element.user_password==req.body.password){
+        res.sendFile(path.join(__dirname + "/html/micuenta.html"));
+
+      }
+      
+
+    });*/
   });
+
 });
 
 

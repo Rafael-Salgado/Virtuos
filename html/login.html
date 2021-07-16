@@ -161,8 +161,8 @@
             <!--   Form User login -->
             <form
               id="miformulario1"
-              action="/account"
-              enctype="text/plain"
+              action="/user-data"
+              method="POST"
               name="myForm"
               class="form-lili"
             >
@@ -171,6 +171,7 @@
                 type="email"
                 class="form-control input-lili"
                 id="loginemail"
+                name="email"
                 placeholder="nombre@ejemplo.com"
                 required
                 title="Tiene que ser un correo válido"
@@ -180,11 +181,12 @@
                 type="password"
                 class="form-control input-lili"
                 id="loginpass1"
+                name="password"
                 placeholder="Contraseña"
                 required
               />
 			  <p id="loginVal" style="color: #ffb938;"></p>
-              <button value="submit" class="btn btn-warning btn-lg button-lili" onclick="loginData()">
+              <button type="submit" value="submit" class="btn btn-warning btn-lg button-lili">
                 Ingresar
               </button>
             </form>

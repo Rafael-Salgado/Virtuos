@@ -127,7 +127,7 @@ fetch(url)
               price: element.price,
               description: element.product_description,
             };
-            addItem(product)
+  
           });
         })
         .catch(err=>console.log(err))
