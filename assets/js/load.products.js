@@ -41,7 +41,7 @@ addItem({
   name: "Trompeta",
   img: "http://images.musicstore.de/images/1280/yamaha-ytr-2330-trompeta-si-bemol_1_BLA0003132-000.jpg",
   category: "viento",
-  sound: "/assets/sounds/guitarra2.ogg",
+  sound: "/assets/sounds/STD.ogg",
   supplier: "Silvertone",
   price: "5,000.00",
   description:
@@ -52,7 +52,7 @@ addItem({
   name: "Clarinete",
   img: "https://www.atelierdecelia.com/productos/imagenes/img_3791_1715cce435bb965ed28aa255e7382d3d_20.jpg",
   category: "viento",
-  sound: "/assets/sounds/guitarra2.ogg",
+  sound: "/assets/sounds/SCD.ogg",
   supplier: "Yamaha",
   price: "7,000.00",
   description:
@@ -63,7 +63,7 @@ addItem({
   name: "Saxofón alto",
   img: "https://karmamusic.mx/5440-large_default/sax-alto-laqueado-cyrus-winds------c.jpg",
   category: "viento",
-  sound: "/assets/sounds/guitarra2.ogg",
+  sound: "/assets/sounds/SSAD.ogg",
   supplier: "Silvertone",
   price: "14,000.00",
   description:
@@ -74,7 +74,7 @@ addItem({
   name: "Saxofón Sopranino",
   img: "https://ae01.alicdn.com/kf/HTB1EtOSaGSs3KVjSZPiq6AsiVXab.jpg_q50.jpg",
   category: "viento",
-  sound: "/assets/sounds/guitarra2.ogg",
+  sound: "/assets/sounds/SSSD.ogg",
   supplier: "Silvertone",
   price: "16,000.00",
   description:
@@ -107,7 +107,7 @@ addItem({
   name: "Guitarra Clásica",
   img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRuXUxuKy6eLtS_jUC_fuJ2dtePy-Ffoe7Tw&usqp=CAU",
   category: "cuerdas",
-  sound: "/assets/sounds/guitarra2.ogg",
+  sound: "/assets/sounds/SGAD.ogg",
   supplier: "Yamaha",
   price: "2,000.00",
   description:
@@ -140,7 +140,7 @@ addItem({
   name: "Contrabajo",
   img: "https://www.mrcdinstrumentos.com.mx/shared/productos/105/AMCB001.jpg",
   category: "cuerdas",
-  sound: "/assets/sounds/guitarra2.ogg",
+  sound: "/assets/sounds/SCBD.ogg",
   supplier: "Silvertone",
   price: "11,000.00",
   description:
