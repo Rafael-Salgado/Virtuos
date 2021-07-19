@@ -235,8 +235,8 @@ function addcarttrompeta(){
     
     }
 
-    /* Tabla de productos */
-let url = "http://localhost:3000/product-data/";
+    /* Tabla de usuarios */
+let url = "http://localhost:3000/user-data/";
 
 fetch(url)
         .then(response => response.json())

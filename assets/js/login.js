@@ -119,13 +119,12 @@ fetch(url)
           console.log(rows);
           rows.forEach(element => {
             const product = {
-              name:element.product_name,
-              img: element.product_image,
-              category: element.category,
-              sound: element.song,
-              supplier: element.provee,
-              price: element.price,
-              description: element.product_description,
+              name:element.user_name,
+              last_name: element.user_lastname,
+              email: element.user_email,
+              phone: element.user_phone,
+              pass: element.user_password
+           
             };
   
           });
