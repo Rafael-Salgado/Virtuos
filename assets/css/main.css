@@ -330,7 +330,7 @@ p:last-child {
 }
 
 .mb-150 {
-  margin-bottom: 60px;
+  margin-bottom: 110px;
 }
 
 @media only screen and (max-width: 767.96px) {
@@ -451,6 +451,7 @@ a.boxed-btn, a.bordered-btn, a.cart-btn {
   font-size: 40px;
   position: relative;
   padding-bottom: 15px;
+  margin-top: 10px;
 }
 
 .section-title h3:after {
@@ -1664,15 +1665,15 @@ div.owl-controls, .owl-controls div {
 
 ----------------------------------------------------------------------------- */
 .news-bg-1 {
-  background-image: url(../img/products/Baterias.png);
+  background-image: url(../img/Noticia1.jpg);
 }
 
 .news-bg-2 {
-  background-image: url(../img/products/corno.png);
+  background-image: url(../img/Noticia2.jpg);
 }
 
 .news-bg-3 {
-  background-image: url(../img/products/corno.png);
+  background-image: url(../img/Noticia3.jpg);
 }
 
 .news-bg-4 {
@@ -2188,7 +2189,7 @@ a.video-play-btn {
 }
 
 .abt-bg {
-  background-image: url(../img/products/Baterias.png);
+  background-image: url(../img/video_bateria2.png);
   height: 100%;
   width: 100%;
   background-size: cover;
@@ -2998,3 +2999,6 @@ table.order-details tbody td {
   width: 100%;
 }
 
+.textoLanding {
+  color: #f5f5f5;
+}
