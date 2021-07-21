@@ -141,7 +141,7 @@
       </div>
     </div>
 
-    <form action="/new-product" id="productForm" method="POST">
+    <form action="" id="productForm" >
       <select
         name="productCategory"
         class="custom-select"
@@ -193,7 +193,8 @@
         id="exampleFormControlInput4"
         placeholder="Precio"
         required
-      /> <br>
+      />
+      <br />
       <input
         type="text"
         name="productSong"
@@ -212,7 +213,7 @@
         required
       />
       <br />
-      <button type="submit" value="Submit" class="btn btn-de-froma">
+      <button type="submit" value="Submit" onclick="submitProduct()" class="btn btn-de-froma">
         Guardar
       </button>
     </form>
@@ -273,9 +274,8 @@
     <script src="/assets/js/sticker.js"></script>
     <!-- main js -->
     <script src="/assets/js/main.js"></script>
-    
+
     <script>
-      
       function submitProduct() {
         let form = document.getElementById("productForm");
         let productName = form.elements["productName"].value;
@@ -284,27 +284,40 @@
         let productCategory = form.elements["productCategory"].value;
         let productPrice = form.elements["productPrice"].value;
         let productDescription = form.elements["productDescription"].value;
-      
+        let productStock = form.elements["productStock"].value;
+        let productSong = form.elements["productSong"].value;
 
-        /* const product = {
-          name: productName,
-          img: productImg,
-          category: productCategory,
-          supplier: productSupplier,
-          price: productPrice,
-          description: productDescription,
-        };
-        if (localStorage.productList == null) {
-          let list = [];
-          list.push(product);
-          alert(JSON.stringify(list));
-          localStorage.setItem("productList", JSON.stringify(list));
-        } else {
-          let list = JSON.parse(localStorage.productList);
-          list.push(product);
-          localStorage.productList = JSON.stringify(list);
-        } */
+        const product = {
+        name: productName,
+        supplier: productSupplier,
+        description: productDescription,
+        song: productSong,
+        category: productCategory,
+        image:productImg,
+        stock: parseInt(productStock),
+        price: parseFloat(productPrice),
+      };
+
+      fetch("http://localhost:8080/newProduct", {
+        method: "POST", // or 'PUT'
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(product),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Success:", data);
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+
+
       }
+
+     
+      
     </script>
     <script src="/assets/js/login.js"></script>
   </body>

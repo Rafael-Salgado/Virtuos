@@ -111,14 +111,12 @@ router.post("/send-mail", function (req, res) {
 /* Insertar nuevo producto */
 router.post("/new-product", function (req, res) {
   console.log(req.body.productName);
- 
+  
   const insert = `INSERT INTO products (id,product_name,price,provee,product_description,song,category,product_image,stock) VALUES (null,'${req.body.productName}',${parseFloat(req.body.productPrice)},'${req.body.productSupplier}','${req.body.productDescription}','${req.body.productSong}','${req.body.productCategory}','${req.body.productImg}',${parseInt(req.body.productStock)})`;
   connection.query(insert, (err, rows) => {
-    if(err) throw err
-  })
- 
+    if(err) throw err 
 
- 
+ })
   res.sendStatus(200);
 });
 
