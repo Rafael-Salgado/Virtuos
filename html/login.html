@@ -49,6 +49,8 @@
     <link rel="stylesheet" href="js/login.js" />
     <!-- login style -->
     <link rel="stylesheet" href="/assets/css/login-style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src ="/assets/js/jquery-1.11.3.min.js"></script>
   </head>
   <body onload="isLogged()">
     <!-- header -->
@@ -162,8 +164,8 @@
             <!--   Form User login -->
             <form
               id="miformulario1"
-              action="/account"
-              enctype="text/plain"
+              action="/user-data"
+              method="POST"
               name="myForm"
               class="form-lili"
             >
@@ -172,6 +174,7 @@
                 type="email"
                 class="form-control input-lili"
                 id="loginemail"
+                name="email"
                 placeholder="nombre@ejemplo.com"
                 required
                 title="Tiene que ser un correo válido"
@@ -181,11 +184,12 @@
                 type="password"
                 class="form-control input-lili"
                 id="loginpass1"
+                name="password"
                 placeholder="Contraseña"
                 required
               />
 			  <p id="loginVal" style="color: #ffb938;"></p>
-              <button value="submit" class="btn btn-warning btn-lg button-lili" onclick="loginData()">
+              <button type="submit" value="submit" class="btn btn-warning btn-lg button-lili">
                 Ingresar
               </button>
             </form>
@@ -194,11 +198,10 @@
           <div>
 			  <!-- Form user sign up -->
             <form
-             action = "/new-user"
+             action ="/new-user"
              method="POST"
               id="miformulario"
-              onsubmit="return false"
-              enctype="text/plain"
+              
               name="myForm"
               class="form-lili"
             >
@@ -261,7 +264,7 @@
                 required
               />
 
-              <button value="submit" class="btn btn-warning btn-lg button-lili" onclick="verificarDatos()">
+              <button type="submit" value="submit" class="btn btn-warning btn-lg button-lili"  >
                 Registrarme
               </button>
             </form>
@@ -272,6 +275,51 @@
     </div>
 
     <!-- end cart -->
+
+ <!--  <script>
+
+
+  var url = 'http://localhost:8080/users/';
+  const myHeaders = new Headers();
+
+  const myRequest = new Request( {
+    method: 'GET',
+    headers: 'Access-Control-Allow-Origin:*',
+    mode: 'cors',
+    cache: 'default',
+  });
+ 
+    fetch(url)
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.log(error))
+
+
+      
+      var invocation = new XMLHttpRequest();
+      
+
+      function callOtherDomain() {
+        if(invocation) {
+          invocation.open('GET', url, true);
+          invocation.onreadystatechange = handler;
+          invocation.send();
+        }
+      }
+
+
+     // let url ='http://localhost:8080/users/'
+      fetch(url)
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.log(error))
+
+
+
+
+
+    </script> --> 
+
 
     <!-- footer -->
     <div class="footer-area">

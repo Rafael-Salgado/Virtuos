@@ -235,8 +235,10 @@ function addcarttrompeta(){
     
     }
 
+
     /* Tabla de productos */
 let url = "http://localhost:8080/products";
+
 
 fetch(url)
         .then(response => response.json())
