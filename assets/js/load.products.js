@@ -2,7 +2,7 @@ function addItem(item) {
   const itemHTML = `<div class="col-lg-4 col-md-6 text-center ${item.category}">
             <div class="single-product-item">
               <div class="product-image">
-                <a href="/product"
+                <a href="/product" onclick="addproduct(${item.id})" 
                   ><img
                     src="${item.img}"
                     alt=""
@@ -35,6 +35,7 @@ addItem({
   price: "10,000.00",
   description:
     "Piano de cola con pedal. Para el armazón sobre el que se asientan las cuerdas se usa madera de roble, abeto, haya o nogal.",
+  id: 1,
 });
 
 addItem({
@@ -259,5 +260,7 @@ fetch(url)
         })
         .catch(err=>console.log(err))
 
-
-  
+function addproduct(product){
+  localStorage.setItem('id', product);
+}
+    
