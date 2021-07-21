@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
+  
 	<!-- title -->
 	<title>Virtuos</title>
 	<link rel="shortcut icon" href="/assets/img/company-logos/Logo.png">
@@ -131,17 +131,18 @@
 				
 				<div class="col-md-7">
 					<div class="single-product-content">
-						<h3>Guitarra Eléctrica </a></h3>
-						<p class="single-product-pricing"><span></span> $5000 </p>
+						<h3 id="nombreProducto">Guitarra Eléctrica </a></h3>
+						<p class="single-product-pricing" id="precioProducto"><span></span> $5000 </p>
 						
-						<P>Ofrece estilo y especificaciones para músicos agresivos. El cuello más delgado es perfecto para un entrenamiento de guitarra intenso y las pastillas especialmente seleccionadas ofrecen un tono claro, potente y moderno.</P>
-						<audio controls>
-							<source src="/assets/sounds/SGD.ogg" type="audio/ogg"> 
+						<P id="descripcionProducto">Ofrece estilo y especificaciones para músicos agresivos. El cuello más delgado es perfecto para un entrenamiento de guitarra intenso y las pastillas especialmente seleccionadas ofrecen un tono claro, potente y moderno.</P>
+					
+					 <audio src="/assets/sounds/SGD.ogg" id="audioProducto" controls></audio>
+					
+						<!-- <audio controls>
+							<source src="/assets/sounds/SGD.ogg" type="audio/ogg" id="audioProducto"> 
 							Elemento de audio no soportado por su explorador.
 						</audio>
-						<p>La guitarra eléctrica surgió de una necesidad de los músicos de jazz, tratando de amplificar su sonido. Desde entonces, se ha convertido en un instrumento musical de cuerdas, capaz de una multitud de sonidos y estilos, dejando en estado catatónico a cualquiera que aprecie su majestuosidad.</p>
-						
-						
+						 -->
 						
 						<div class="single-product-form">
 							<form action="index.html">
@@ -149,7 +150,7 @@
 								<a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Añadir</a>
 							</form>
 							<!-- <a href="cart.html" class="cart-btn"><i class="fas fa-shopping-cart"></i> Añadir</a> -->
-							<p><strong>Categorías: </strong>Guitarra, Eléctricos</p>
+							<p id="categoriaProducto"><strong>Categorías: </strong>Guitarra, Eléctricos</p>
 						</div>
 						<h4>Sociales:</h4>
 						<ul class="product-share2">
@@ -277,6 +278,7 @@
 	<!-- main js -->
 	<script src="/assets/js/main.js"></script>
 	<script src="/assets/js/login.js"></script>
+	<script src="/assets/js/singleproduct.js"></script>
 
 </body>
 </html>
