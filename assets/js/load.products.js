@@ -235,8 +235,10 @@ function addcarttrompeta(){
     
     }
 
-    /* Tabla de usuarios */
-let url = "http://localhost:3000/user-data/";
+
+    /* Tabla de productos */
+let url = "http://localhost:8080/products";
+
 
 fetch(url)
         .then(response => response.json())
@@ -244,15 +246,18 @@ fetch(url)
           console.log(rows);
           rows.forEach(element => {
             const product = {
-              name:element.product_name,
-              img: element.product_image,
+              name:element.name,
+              img: element.image,
               category: element.category,
               sound: element.song,
-              supplier: element.provee,
+              supplier: element.supplier,
               price: element.price,
-              description: element.product_description,
+              description: element.description,
             };
             addItem(product)
           });
         })
         .catch(err=>console.log(err))
+
+
+  
