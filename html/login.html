@@ -48,6 +48,8 @@
     <link rel="stylesheet" href="js/login.js" />
     <!-- login style -->
     <link rel="stylesheet" href="/assets/css/login-style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src ="/assets/js/jquery-1.11.3.min.js"></script>
   </head>
   <body onload="isLogged()">
     <!-- header -->
@@ -272,6 +274,51 @@
     </div>
 
     <!-- end cart -->
+
+ <!--  <script>
+
+
+  var url = 'http://localhost:8080/users/';
+  const myHeaders = new Headers();
+
+  const myRequest = new Request( {
+    method: 'GET',
+    headers: 'Access-Control-Allow-Origin:*',
+    mode: 'cors',
+    cache: 'default',
+  });
+ 
+    fetch(url)
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.log(error))
+
+
+      
+      var invocation = new XMLHttpRequest();
+      
+
+      function callOtherDomain() {
+        if(invocation) {
+          invocation.open('GET', url, true);
+          invocation.onreadystatechange = handler;
+          invocation.send();
+        }
+      }
+
+
+     // let url ='http://localhost:8080/users/'
+      fetch(url)
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.log(error))
+
+
+
+
+
+    </script> --> 
+
 
     <!-- footer -->
     <div class="footer-area">
