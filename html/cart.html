@@ -181,7 +181,7 @@
 							</button> -->
                 <button
                   class="btn btn-warning btn-lg"
-									id="proceder"
+				  id="proceder"
                   type="button"
                   data-toggle="collapse"
                   data-target="#collapseExample"
@@ -195,120 +195,175 @@
         </div>
       </div>
     </div>
-    <!-- payment method --------------------------------------------------------------------------------------------------------->
-    <div class="collapse centered" id="collapseExample">
-      <div class="modal__container">
-        <div class="modal__featured">
-          <button
-            type="button"
-            class="button--transparent button--close"
-            data-toggle="collapse"
-            data-target="#collapseExample"
-            aria-expanded="false"
-            aria-controls="collapseExample"
-            data-dismiss="modal"
-          >
-            <svg
-              class="nc-icon glyph"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              x="0px"
-              y="0px"
-              width="32px"
-              height="32px"
-              viewBox="0 0 32 32"
-            >
-              <g>
-                <path
-                  fill="#ffffff"
-                  d="M1.293,15.293L11,5.586L12.414,7l-8,8H31v2H4.414l8,8L11,26.414l-9.707-9.707 C0.902,16.316,0.902,15.684,1.293,15.293z"
-                ></path>
-              </g>
-            </svg>
-            <span class="visuallyhidden">Return to Product Page</span>
-          </button>
-          <div class="modal__circle"></div>
-          <img src="" />
-        </div>
-        <div class="modal__content">
-          <h4>Detalles de pago</h4>
-          <br />
-          <form>
-            <ul class="form-list">
-              <li class="form-list__row">
-                <label>Nombre</label>
-                <input type="text" maxlength="20" name="" required="" />
-              </li>
-              <li class="form-list__row">
-                <label>Número de Tarjeta</label>
-                <div id="input--cc" class="creditcard-icon">
-                  <input
-                    type="text"
-                    maxlength="16"
-                    name="cc_number"
-                    required=""
-                  />
-                </div>
-              </li>
-              <li class="form-list__row form-list__row--inline">
-                <div>
-                  <label>Vigencia</label>
-                  <div class="form-list__input-inline">
-                    <input
-                      type="text"
-                      name="cc_month"
-                      placeholder="MM"
-                      pattern="\\d*"
-                      minlength="2"
-                      maxlength="2"
-                      required=""
-                    />
-                    <input
-                      type="text"
-                      name="cc_year"
-                      placeholder="YY"
-                      pattern="\\d*"
-                      minlength="2"
-                      maxlength="2"
-                      required=""
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label>CCV</label>
-                  <input
-                    type="text"
-                    name="cc_cvc"
-                    placeholder="123"
-                    pattern="\\d*"
-                    minlength="3"
-                    maxlength="4"
-                    required=""
-                  />
-                </div>
-              </li>
-              <li class="form-list__row form-list__row--agree">
-                <label>
-                  <input type="checkbox" name="save_cc" checked="checked" />
-                  Guardar mi información para compras futuras
-                </label>
-              </li>
-              <li>
-                <a href=""
-                  ><button
-                    type="button"
-                    onclick="clearcart()"
-                    class="button-finale"
-                  >
-                    Pagar
-                  </button></a
-                >
-              </li>
-            </ul>
-          </form>
-        </div>
-      </div>
-    </div>
+   <!-- payment method --------------------------------------------------------------------------------------------------------->
+   <div class="collapse centered" id="collapseExample">
+	<div class="modal__container">
+	  <div class="modal__featured">
+		<button
+		  type="button"
+		  class="button--transparent button--close"
+		  data-toggle="collapse"
+		  data-target="#collapseExample"
+		  aria-expanded="false"
+		  aria-controls="collapseExample"
+		  data-dismiss="modal"
+		>
+		  <svg
+			class="nc-icon glyph"
+			xmlns="http://www.w3.org/2000/svg"
+			xmlns:xlink="http://www.w3.org/1999/xlink"
+			x="0px"
+			y="0px"
+			width="32px"
+			height="32px"
+			viewBox="0 0 32 32"
+		  >
+			<g>
+			  <path
+				fill="#ffffff"
+				d="M1.293,15.293L11,5.586L12.414,7l-8,8H31v2H4.414l8,8L11,26.414l-9.707-9.707 C0.902,16.316,0.902,15.684,1.293,15.293z"
+			  ></path>
+			</g>
+		  </svg>
+		  <span class="visuallyhidden">Return to Product Page</span>
+		</button>
+		<div class="modal__circle"></div>
+		<img src="" />
+	  </div>
+	  <div class="modal__content">
+		<h4>Detalles de pago</h4>
+		<br />
+		<form>
+		  <ul class="form-list">
+			<li class="form-list__row">
+			  <label>Nombre</label>
+			  <input type="text" maxlength="20" name="" required="" />
+			</li>
+			<li class="form-list__row">
+			  <label>Número de Tarjeta</label>
+			  <div id="input--cc" class="creditcard-icon">
+				<input
+				  type="text"
+				  maxlength="16"
+				  name="cc_number"
+				  required=""
+				/>
+			  </div>
+			</li>
+			<li class="form-list__row form-list__row--inline">
+			  <div>
+				<label>Vigencia</label>
+				<div class="form-list__input-inline">
+				  <input
+					type="text"
+					name="cc_month"
+					placeholder="MM"
+					pattern="\\d*"
+					minlength="2"
+					maxlength="2"
+					required=""
+				  />
+				  <input
+					type="text"
+					name="cc_year"
+					placeholder="YY"
+					pattern="\\d*"
+					minlength="2"
+					maxlength="2"
+					required=""
+				  />
+				</div>
+			  </div>
+			  <div>
+				<label>CCV</label>
+				<input
+				  type="text"
+				  name="cc_cvc"
+				  placeholder="123"
+				  pattern="\\d*"
+				  minlength="3"
+				  maxlength="4"
+				  required=""
+				/>
+			  </div>
+			  
+			  <li class="form-list__row">
+			   <p> </p>
+			   <h4>Información de envío</h4>
+			   <p> </p>
+			   <select class="form-selecto" aria-label="Default select example">
+				<option selected>Selecciona tu estado</option>
+				<option value="1">Ciudad de México</option>
+				<option value="2">Jalisco</option>
+				<option value="3">Monterrey</option>
+			  </select>
+			   <select class="form-selecto aria-label="Default select example">
+				<option selected>Selecciona tu municipio</option>
+				<option value="1">Guadalajara</option>
+				<option value="2">Zapopan</option>
+				<option value="3">Tlaquepaque</option>
+			  </select>
+			   <li class="form-list__row">
+				<label>Dirección</label>
+				<input type="text" maxlength="50" name="" required="" />
+			  </li>
+			  <li class="form-list__row">
+				<label>Entre las calles</label>
+				<div id="input" class="creditcard-icon">
+				  <input
+					type="text"
+					maxlength="16"
+					name="cc_number"
+					required=""
+				  />
+				</div>
+			  </li>
+			  <li class="form-list__row form-list__row--inline">
+				<div>
+				  <label>Horarios de recepción</label>
+				  <div class="form-list__input-inline">
+					<input
+					  type="text"
+					  name="cc_month"
+					  placeholder=" De 00:00  "
+					  pattern="\\h*"
+					  minlength="5"
+					  maxlength="5"
+					  required=""
+					/>
+					<input
+					  type="text"
+					  name="cc_year"
+					  placeholder="Hasta 00:00"
+					  pattern="\\h*"
+					  minlength="5"
+					  maxlength="5"
+					  required=""
+					/>
+				  </div>
+				</div>
+			</li>
+			<li class="form-list__row form-list__row--agree">
+			  <label>
+				<input type="checkbox" name="save_cc" checked="checked" />
+				Guardar mi información para compras futuras
+			  </label>
+			</li>
+			<li>
+			  <a href=""
+				><button
+				  type="button"
+				  onclick="clearcart()"
+				  class="button-finale"
+				>Pagar
+				</button></a
+			  >
+			</li>
+		  </ul>
+		</form>
+	  </div>
+	</div>
+  </div>
 
     <!-- footer ------------------------------------------------------------------------------------------------------->
     <div class="footer-area">
