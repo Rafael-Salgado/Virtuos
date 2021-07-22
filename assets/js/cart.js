@@ -4,11 +4,15 @@ function loadCart(){
   verifycart();
   var items = JSON.parse(localStorage.getItem("cart"));
   var keysProduct = Object.keys(items);
-  console.log(keysProduct);
   var subtotal=0;
+  if(keysProduct.length > 0){
+    document.getElementById("proceder").style.visibility = "visible";
+  } else {
+    document.getElementById("proceder").style.visibility = "hidden";
+  }
   for(let i = 0; i < keysProduct.length;i++){
     const itemHTML ='<tr class="table-body-row">'+
-    '<td class="product-remove"><a href="#"><i class="far fa-window-close"></i></a></td>'+
+    '<td class="product-remove"><a onclick="clearcart()" href="/car"><i class="far fa-window-close"></i></a></td>'+
     '<td class="product-image"><img src="'+items[i].img +'" alt="a"></td>'+
     '<td class="product-name">'+items[i].name +'</td>'+
     '<td class="product-price">$'+items[i].price +'</td>'+
@@ -33,6 +37,5 @@ function verifycart(){
 
 function clearcart (){
 localStorage.setItem("cart", JSON.stringify({}))
-alert("Se procesó tu compra! Gracias")
+alert("El carrito quedará vacío, ¿Es correcto?")
 } 
-
