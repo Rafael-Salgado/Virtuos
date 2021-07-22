@@ -183,7 +183,7 @@
                 required
               />
 			  <p id="loginVal" style="color: #ffb938;"></p>
-              <button type="submit" value="submit" class="btn btn-warning btn-lg button-lili">
+              <button type="submit" value="submit" class="btn btn-warning btn-lg button-lili" onclick="loginUserData()">
                 Ingresar
               </button>
             </form>
@@ -257,7 +257,7 @@
                 required
               />
 
-              <button type="submit" value="submit" class="btn btn-warning btn-lg button-lili" onclick="newUser()" >
+              <button type="submit" value="submit" class="btn btn-warning btn-lg button-lili" onclick="verificarDatos()" >
                 Registrarme
               </button>
             </form>
@@ -312,51 +312,6 @@
 
 
     </script> --> 
-
-    <script>
-
-
-      
-      function newUser(){
-  
-        let form = document.getElementById("miformulario");
-        let name = form.elements["name"].value;
-        let lastName = form.elements["last_name"].value;
-        let email = form.elements["email"].value;
-        let phone = form.elements["phone"].value;
-        let pass = form.elements["pass"].value;
-        let pass2 = form.elements["pass2"].value;
-       
-
-        const user = {
-        user_name: name,
-        user_lastname: lastName,
-        user_email: email,
-        user_phone: phone,
-        user_password: pass,
-      
-      };
-
-        fetch("http://localhost:8080/newUser", {
-        method: "POST", // or 'PUT'
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(user),
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          console.log("Success:", data);
-        })
-        .catch((error) => {
-          console.error("Error:", error);
-        });
-
-
-      }
-    </script>
-
-
     <!-- footer -->
     <div class="footer-area">
       <div class="container">
