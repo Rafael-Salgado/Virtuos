@@ -14,9 +14,10 @@ fetch(url)
               description: element.description,
             };
             document.getElementById("nombreProducto").innerHTML=product.name;
-            document.getElementById("precioProducto").innerHTML=product.price;
+            document.getElementById("precioProducto").innerHTML=`<strong>$ </strong>${product.price}`;
             document.getElementById("descripcionProducto").innerHTML=product.description;
             document.getElementById("audioProducto").src=product.sound;
+            document.getElementById("imagenProducto").src=product.img;
             document.getElementById("categoriaProducto").innerHTML=`<strong>Categoría: </strong>${product.category}`;
             
             console.log(product)         
