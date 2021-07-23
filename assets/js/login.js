@@ -69,8 +69,9 @@ function verificarDatos(){
               alert.classList.remove('alert-danger');
               alert.classList.add('alert-success')
               alert.innerHTML = "Tus datos fueron enviados!";
-              register();
-              clearData();
+              //register();
+              newUser();
+             
               localStorage.setItem("sessionToken",cipherText);
             }
           }
@@ -107,45 +108,67 @@ function clearData(){
 }
 
 
+function newUser(){
+  
+  let form = document.getElementById("miformulario");
+  let name = form.elements["name"].value;
+  let lastName = form.elements["last_name"].value;
+  let email = form.elements["email"].value;
+  let phone = form.elements["phone"].value;
+  let pass = form.elements["pass"].value;
+  let pass2 = form.elements["pass2"].value;
+ 
+
+  const user = {
+  user_name: name,
+  user_lastname: lastName,
+  user_email: email,
+  user_phone: phone,
+  user_password: pass,
+
+};
+
+  fetch("http://localhost:8080/newUser", {
+  method: "POST", // or 'PUT'
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify(user),
+})
+  .then((response) => response.json())
+  .then((data) => {
+    clearData();
+    console.log("Success:", data);
+  })
+  .catch((error) => {
+    console.error("Error:", error);
+  });
+
+
+}
+
+
 function loginUserData(){
   let user = document.getElementById('loginemail').value;
   let pass = document.getElementById('loginpass1').value;
- 
- 
- 
- 
- 
+
  /* Tabla de usuarios */
-let url = "http://localhost:8080/users/";
+let url = `http://localhost:8080/login?email=${user}&password=${pass}`;
 
 fetch(url)
-        .then(response => response.json())
-        .then(rows => {
-          console.log(rows);
-          rows.forEach(element => {
-            const product = {
-              name:element.user_name,
-              last_name: element.user_lastname,
-              email: element.user_email,
-              phone: element.user_phone,
-              pass: element.user_password
-           
-            };
-  
-          });
+        .then(response => response.text())
+        .then(data => {
+         // do something with the text response 
+            if(data=="Success login."){
+              document.getElementById('loginVal').innerHTML = "Login exitoso!";
+              localStorage.setItem('isLoggedIn', 1)
+              window.location.replace("http://localhost:3000/account");
+            }else{
+              document.getElementById('loginVal').innerHTML = "Usuario y/o Contraseña inválidos.";
+              localStorage.setItem('isLoggedIn', 0)
+            }
         })
         .catch(err=>console.log(err))
 
-
-
-if(data==originalText)
-{
-  document.getElementById('loginVal').innerHTML = "Login exitoso!";
-  localStorage.setItem('isLoggedIn', 1)
-}
-else{
-  document.getElementById('loginVal').innerHTML = "Usuario y/o Contraseña inválidos.";
-  localStorage.setItem('isLoggedIn', 0)
-}
 }
   
