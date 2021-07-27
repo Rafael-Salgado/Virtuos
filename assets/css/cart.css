@@ -1985,7 +1985,36 @@ table.order-details tbody td {
           background-size: 36px;
           -ms-transform: translateY(-50%);
               transform: translateY(-50%); }
-    
+              @media screen and (min-width:924px) {
+                .modal__container {
+                  display: -ms-flexbox;
+                  display: flex;
+                  max-width: 675px;
+                  min-height: 400px;
+                  margin-bottom: 125px;
+                  background-color: #ffffff;
+                  border-radius: 5px;
+                  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1); }
+                  .centered{
+                    margin-left: 25%;
+                  }
+
+              }
+              @media screen and (max-width:924px) {
+                .modal__container {
+                  display: -ms-flexbox;
+                  /* display: flex; */
+                  max-width: 675px;
+                  min-height: 400px;
+                  margin-bottom: 125px;
+                  background-color: #ffffff;
+                  border-radius: 5px;
+                  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1); }
+                  .centered{
+                   /*  margin-left: 25%; */
+                  }
+
+              }
       .modal {
         display: -ms-flexbox;
         display: flex;
@@ -1999,7 +2028,7 @@ table.order-details tbody td {
         z-index: 100; 
       overflow-y: auto;
       }
-        .modal__container {
+        /* .modal__container {
           display: -ms-flexbox;
           display: flex;
           max-width: 675px;
@@ -2007,7 +2036,7 @@ table.order-details tbody td {
           margin-bottom: 125px;
           background-color: #ffffff;
           border-radius: 5px;
-          box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1); }
+          box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1); } */
         .modal__featured {
           position: relative;
           -ms-flex: 1;
@@ -2038,7 +2067,5 @@ table.order-details tbody td {
           -ms-flex: 3;
               flex: 3;
           padding: 40px 30px; }
-          .centered{
-            margin-left: 25%;
-          }
+          
           
