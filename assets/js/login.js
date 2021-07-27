@@ -41,7 +41,7 @@ function verificarDatos(){
   let pass1 = document.getElementById('pass1').value;
   let pass2 = document.getElementById('pass2').value;
   let token = email+pass1;
-  let cipherText = CryptoJS.AES.encrypt(token, "codingatthedisco").toString();
+  //let cipherText = CryptoJS.AES.encrypt(token, "codingatthedisco").toString();
   nombre = nombre.trim();
   if (!(/^[a-zA-Z\s]+$/.test(nombre))){
     alert.innerHTML = "Nombre invalido (a-z, A-Z)";
@@ -72,7 +72,7 @@ function verificarDatos(){
               //register();
               newUser();
              
-              localStorage.setItem("sessionToken",cipherText);
+              //localStorage.setItem("sessionToken",cipherText);
             }
           }
         }
@@ -109,7 +109,7 @@ function clearData(){
 
 
 function newUser(){
-  
+  const key = CryptoJS.enc.Utf8.parse('1234123412ABCDEF')
   let form = document.getElementById("miformulario");
   let name = form.elements["name"].value;
   let lastName = form.elements["last_name"].value;
@@ -117,15 +117,18 @@ function newUser(){
   let phone = form.elements["phone"].value;
   let pass = form.elements["pass"].value;
   let pass2 = form.elements["pass2"].value;
- 
+  let ckey = CryptoJS.enc.Utf8.parse(key)
+  let encrypted = CryptoJS.AES.encrypt(pass, ckey, {
+    mode: CryptoJS.mode.ECB,
+    padding: CryptoJS.pad.Pkcs7
+  })
 
   const user = {
   user_name: name,
   user_lastname: lastName,
   user_email: email,
   user_phone: phone,
-  user_password: pass,
-
+  user_password: encrypted.toString(),
 };
 
   fetch("http://localhost:8080/newUser", {
@@ -147,21 +150,33 @@ function newUser(){
 
 }
 
-
 function loginUserData(){
+  const key = CryptoJS.enc.Utf8.parse('1234123412ABCDEF')
   let user = document.getElementById('loginemail').value;
   let pass = document.getElementById('loginpass1').value;
-
+  let ckey = CryptoJS.enc.Utf8.parse(key)
+  let encrypted = CryptoJS.AES.encrypt(pass, ckey, {
+    mode: CryptoJS.mode.ECB,
+    padding: CryptoJS.pad.Pkcs7
+  })
+  
  /* Tabla de usuarios */
-let url = `http://localhost:8080/login?email=${user}&password=${pass}`;
+let url = `http://localhost:8080/login?email=${user}&password=${encrypted.toString()}`;
 
 fetch(url)
-        .then(response => response.text())
+        .then(response => response.json())
         .then(data => {
          // do something with the text response 
-            if(data=="Success login."){
-              document.getElementById('loginVal').innerHTML = "Login exitoso!";
-              localStorage.setItem('isLoggedIn', 1)
+            if(data!=null){
+             /*  document.getElementById('loginVal').innerHTML = "Login exitoso!";
+              localStorage.setItem('isLoggedIn', 1) */
+              const usuario ={
+                usuarioNombre: data.user_name,
+                usuarioApellido: data.user_lastname,
+                usuarioEmail: data.user_email,
+                usuarioPhone: data.user_phone,
+              };
+            localStorage.setItem("userName", JSON.stringify(usuario));
               window.location.replace("http://localhost:3000/account");
             }else{
               document.getElementById('loginVal').innerHTML = "Usuario y/o Contraseña inválidos.";

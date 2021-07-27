@@ -2102,7 +2102,7 @@ form .input-lili, form .textarea-lili, form .select-lili{
 form .button-lili {
 	display: block;
 	background-color: #eec23e;
-	padding: 10px 45px 10px 45px;
+	/* padding: 10px 45px 10px 45px; */
 	border: 0;
 	font-size: 1em; 
 	color: 	white;
